@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 370733138}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -4.11}
+  m_LocalRotation: {x: -0, y: 0.096095905, z: -0, w: 0.9953721}
+  m_LocalPosition: {x: 0, y: 0, z: -3.999978}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7409132318724865046}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 11.029, z: 0}
 --- !u!20 &370733140
 Camera:
   m_ObjectHideFlags: 0
@@ -3014,7 +3014,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -3067,7 +3067,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeZ:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -3120,7 +3120,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationX:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -3173,7 +3173,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -7444,14 +7444,22 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.13
       objectReference: {fileID: 0}
-    - target: {fileID: 2300000, guid: bac566a5bbe87584b86a02e7c8ba3381, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 028869170a212c2418c323892e550720, type: 2}
     - target: {fileID: 3300002, guid: bac566a5bbe87584b86a02e7c8ba3381, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 4300018, guid: bac566a5bbe87584b86a02e7c8ba3381, type: 3}
+    - target: {fileID: 2300018, guid: bac566a5bbe87584b86a02e7c8ba3381, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 598954ff2935b6d4d900252167c20787, type: 2}
+    - target: {fileID: 2300010, guid: bac566a5bbe87584b86a02e7c8ba3381, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: de30738aa2991cd41a7ffd430bdaf1e3, type: 2}
+    - target: {fileID: 2300000, guid: bac566a5bbe87584b86a02e7c8ba3381, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 028869170a212c2418c323892e550720, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bac566a5bbe87584b86a02e7c8ba3381, type: 3}
 --- !u!4 &5474884695808000798 stripped
