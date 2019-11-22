@@ -55,6 +55,9 @@ namespace UnityStandardAssets.Vehicles.Car
         public float Revs { get; private set; }
         public float AccelInput { get; private set; }
 
+        /**Variables added**/
+        public Transform steeringWheel;
+
         // Use this for initialization
         private void Start()
         {
@@ -169,6 +172,8 @@ namespace UnityStandardAssets.Vehicles.Car
             AddDownForce();
             CheckForWheelSpin();
             TractionControl();
+
+            AdjustSteeringWheelRotation();
         }
 
 
@@ -349,6 +354,7 @@ namespace UnityStandardAssets.Vehicles.Car
                     m_CurrentTorque = m_FullTorqueOverAllWheels;
                 }
             }
+            AdjustSteeringWheelRotation();
         }
 
 
@@ -362,6 +368,19 @@ namespace UnityStandardAssets.Vehicles.Car
                 }
             }
             return false;
+        }
+
+        /**Start of handwritten**/
+        private void AdjustSteeringWheelRotation()
+        {
+            if (steeringWheel != null)
+            {
+                Vector3 eulers = steeringWheel.localRotation.eulerAngles;
+                eulers.z = -m_SteerAngle * 2;
+
+                steeringWheel.localRotation = Quaternion.Slerp(steeringWheel.localRotation, Quaternion.Euler(eulers), Time.deltaTime * 2.5f);
+
+            }
         }
     }
 }
