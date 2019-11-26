@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace UnityStandardAssets.Vehicles.Car
 {
@@ -56,7 +57,9 @@ namespace UnityStandardAssets.Vehicles.Car
         public float AccelInput { get; private set; }
 
         /**Variables added**/
-        public Transform steeringWheel;
+        public Transform SteeringWheel;
+        public Text SpeedText;
+        public Transform SpeedNeedle;
 
         // Use this for initialization
         private void Start()
@@ -174,6 +177,7 @@ namespace UnityStandardAssets.Vehicles.Car
             TractionControl();
 
             AdjustSteeringWheelRotation();
+            AdjustNeedleRotationAndSpeedText();
         }
 
 
@@ -354,7 +358,6 @@ namespace UnityStandardAssets.Vehicles.Car
                     m_CurrentTorque = m_FullTorqueOverAllWheels;
                 }
             }
-            AdjustSteeringWheelRotation();
         }
 
 
@@ -373,14 +376,40 @@ namespace UnityStandardAssets.Vehicles.Car
         /**Start of handwritten**/
         private void AdjustSteeringWheelRotation()
         {
-            if (steeringWheel != null)
+            if (SteeringWheel != null)
             {
-                Vector3 eulers = steeringWheel.localRotation.eulerAngles;
+                Vector3 eulers = SteeringWheel.localRotation.eulerAngles;
                 eulers.z = -m_SteerAngle * 2;
 
-                steeringWheel.localRotation = Quaternion.Slerp(steeringWheel.localRotation, Quaternion.Euler(eulers), Time.deltaTime * 2.5f);
+                SteeringWheel.localRotation = Quaternion.Slerp(SteeringWheel.localRotation, Quaternion.Euler(eulers), Time.deltaTime * 2.5f);
 
             }
+        }
+
+        private void AdjustNeedleRotationAndSpeedText()
+        {
+            float speed = m_Rigidbody.velocity.magnitude;
+            switch (m_SpeedType)
+            {
+                case SpeedType.MPH:
+
+                    speed *= 2.23693629f;
+                    if (speed > m_Topspeed)
+                        m_Rigidbody.velocity = (m_Topspeed / 2.23693629f) * m_Rigidbody.velocity.normalized;
+                    break;
+
+                case SpeedType.KPH:
+                    speed *= 3.6f;
+                    if (speed > m_Topspeed)
+                        m_Rigidbody.velocity = (m_Topspeed / 3.6f) * m_Rigidbody.velocity.normalized;
+                    break;
+            }
+            SpeedText.text = ((int)speed).ToString();
+
+            Vector3 eulers = SpeedNeedle.localRotation.eulerAngles;
+            eulers.z = -m_SteerAngle * 2;
+
+            SpeedNeedle.localRotation = Quaternion.Slerp(SpeedNeedle.localRotation, Quaternion.Euler(eulers), Time.deltaTime * 2.5f);
         }
     }
 }

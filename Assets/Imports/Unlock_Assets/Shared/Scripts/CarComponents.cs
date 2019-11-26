@@ -65,6 +65,7 @@ public class CarComponents : MonoBehaviour {
 			RpmNeedle.localEulerAngles = Vector3.Lerp( RpmNeedle.localEulerAngles, temp, Time.deltaTime * _NeedleSmoothing);
 		}
 
+        /*
 		if (steeringWheel != null) {
 			Vector3 eulers = steeringWheel.localRotation.eulerAngles;
 			eulers.z = rotateNeedles * 15.0f;
@@ -72,8 +73,9 @@ public class CarComponents : MonoBehaviour {
 			steeringWheel.localRotation = Quaternion.Slerp (steeringWheel.localRotation, Quaternion.Euler (eulers), Time.deltaTime * 2.5f);
 
 		}
+        */
 
-		txtSpeed.text = ((int)(rotateNeedles * 100.0f)).ToString () + " km/h";
+		// txtSpeed.text = ((int)(rotateNeedles * 100.0f)).ToString () + " km/h";
 		txtRPM.text = ((int)(rotateNeedles * 1000.0f)).ToString ();
 		
 	}

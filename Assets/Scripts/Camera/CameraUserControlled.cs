@@ -26,7 +26,7 @@ public class CameraUserControlled : MonoBehaviour
         Vector3 positiveRotation = rotationAdjust;
         if (positiveRotation.x < 0) positiveRotation.x += 360;
         if (positiveRotation.y < 0) positiveRotation.y += 360;
-        print(rotationAdjust + " ## " +positiveRotation);
+        //print(rotationAdjust + " ## " +positiveRotation);
 
         Vector3 parentRotation = parent.transform.eulerAngles;
 

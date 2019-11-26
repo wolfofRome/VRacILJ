@@ -3932,7 +3932,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.01
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -4605,12 +4605,14 @@ MonoBehaviour:
   m_ReverseTorque: 500
   m_MaxHandbrakeTorque: 100000000
   m_Downforce: 100
-  m_SpeedType: 0
+  m_SpeedType: 1
   m_Topspeed: 150
   m_RevRangeBoundary: 1
   m_SlipLimit: 0.3
   m_BrakeTorque: 20000
-  steeringWheel: {fileID: 6810522696577185914}
+  SteeringWheel: {fileID: 6810542480787854340}
+  SpeedText: {fileID: 6851475789441423472}
+  SpeedNeedle: {fileID: 6810228205177373876}
 --- !u!114 &6813130832090967215
 MonoBehaviour:
   m_ObjectHideFlags: 0
