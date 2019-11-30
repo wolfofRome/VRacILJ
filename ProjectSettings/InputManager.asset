@@ -118,6 +118,38 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
+    m_Name: Mouse X
+    descriptiveName: Camera control with gamepad
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 0
+    dead: 0.1
+    sensitivity: 1
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 3
+    joyNum: 0
+  - serializedVersion: 3
+    m_Name: Mouse Y
+    descriptiveName: Camera control with gamepad
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 0
+    dead: 0.1
+    sensitivity: 1
+    snap: 0
+    invert: 1
+    type: 2
+    axis: 4
+    joyNum: 0
+  - serializedVersion: 3
     m_Name: Mouse Y
     descriptiveName: 
     descriptiveNegativeName: 
@@ -151,7 +183,7 @@ InputManager:
     joyNum: 0
   - serializedVersion: 3
     m_Name: Horizontal
-    descriptiveName: 
+    descriptiveName: Acceleration with gamepad
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: 
@@ -167,6 +199,22 @@ InputManager:
     joyNum: 0
   - serializedVersion: 3
     m_Name: Vertical
+    descriptiveName: Brake with gamepad
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 0
+    dead: 0.05
+    sensitivity: 1
+    snap: 1
+    invert: 0
+    type: 2
+    axis: 9
+    joyNum: 0
+  - serializedVersion: 3
+    m_Name: Vertical
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -174,12 +222,12 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
-    dead: 0.19
+    dead: 0.05
     sensitivity: 1
-    snap: 0
+    snap: 1
     invert: 1
     type: 2
-    axis: 1
+    axis: 8
     joyNum: 0
   - serializedVersion: 3
     m_Name: Fire1
