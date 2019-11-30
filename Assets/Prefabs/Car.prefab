@@ -1124,12 +1124,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6811905004227326672}
   m_LocalRotation: {x: 0, y: -0, z: 0.008726839, w: -0.9999619}
-  m_LocalPosition: {x: -0.41279632, y: 0.111380935, z: 0.5650142}
+  m_LocalPosition: {x: -0.4109108, y: 0.1086573, z: 0.5650158}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6810066503740054032}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 359}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 300}
 --- !u!33 &6844170514861203534
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3628,7 +3628,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blink: 0
-  frontLightsOn: 0
+  frontLightsOn: 1
   brakeEffectsOn: 0
   SpeedNeedle: {fileID: 6810534985653551874}
   SpeedNeedleRotateRange: {x: 0, y: 359}
@@ -4612,7 +4612,9 @@ MonoBehaviour:
   m_BrakeTorque: 20000
   SteeringWheel: {fileID: 6810542480787854340}
   SpeedText: {fileID: 6851475789441423472}
-  SpeedNeedle: {fileID: 6810228205177373876}
+  SpeedNeedle: {fileID: 6810534985653551874}
+  SpeedNeedleRotateRange: {x: 0, y: 150}
+  _NeedleSmoothing: 1
 --- !u!114 &6813130832090967215
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -374,6 +374,10 @@ namespace UnityStandardAssets.Vehicles.Car
         }
 
         /**Start of handwritten**/
+
+        public Vector2 SpeedNeedleRotateRange = Vector3.zero;
+        public float _NeedleSmoothing = 1;
+
         private void AdjustSteeringWheelRotation()
         {
             if (SteeringWheel != null)
@@ -394,22 +398,19 @@ namespace UnityStandardAssets.Vehicles.Car
                 case SpeedType.MPH:
 
                     speed *= 2.23693629f;
-                    if (speed > m_Topspeed)
-                        m_Rigidbody.velocity = (m_Topspeed / 2.23693629f) * m_Rigidbody.velocity.normalized;
                     break;
 
                 case SpeedType.KPH:
                     speed *= 3.6f;
-                    if (speed > m_Topspeed)
-                        m_Rigidbody.velocity = (m_Topspeed / 3.6f) * m_Rigidbody.velocity.normalized;
                     break;
             }
             SpeedText.text = ((int)speed).ToString();
 
-            Vector3 eulers = SpeedNeedle.localRotation.eulerAngles;
-            eulers.z = -m_SteerAngle * 2;
+            Vector3 SpeedEulers = SpeedNeedle.localRotation.eulerAngles;
+            Vector3 temp = new Vector3(SpeedEulers.x, SpeedEulers.y, -Mathf.Lerp(SpeedNeedleRotateRange.x, SpeedNeedleRotateRange.y, speed / MaxSpeed));
+            print(temp);
 
-            SpeedNeedle.localRotation = Quaternion.Slerp(SpeedNeedle.localRotation, Quaternion.Euler(eulers), Time.deltaTime * 2.5f);
+            SpeedNeedle.localEulerAngles = Vector3.Lerp(temp, SpeedNeedle.localEulerAngles, Time.deltaTime * _NeedleSmoothing);
         }
     }
 }

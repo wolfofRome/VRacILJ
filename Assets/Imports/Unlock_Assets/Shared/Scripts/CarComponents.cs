@@ -52,12 +52,14 @@ public class CarComponents : MonoBehaviour {
 			TurnOnBackLights ();
 		}
 
+        /*
 		if (SpeedNeedle) {
 
 				Vector3 temp = new Vector3 (SpeedEulers.x, SpeedEulers.y, Mathf.Lerp (SpeedNeedleRotateRange.x, SpeedNeedleRotateRange.y, (rotateNeedles)));
 				SpeedNeedle.localEulerAngles = Vector3.Lerp (SpeedNeedle.localEulerAngles, temp, Time.deltaTime * _NeedleSmoothing);
 
 		}
+        */
 
 		if (RpmNeedle)
 		{
