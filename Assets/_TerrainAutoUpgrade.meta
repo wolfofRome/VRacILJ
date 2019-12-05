@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 00f90c7b4d6ef994096e53aed1815213
+=======
+guid: 28fd7b95a76293a4da92daabaca3a99e
+>>>>>>> TestLapSystem
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
