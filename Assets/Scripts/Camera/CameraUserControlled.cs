@@ -8,12 +8,6 @@ public class CameraUserControlled : MonoBehaviour
     public GameObject parent;
 
     private Vector3 rotationAdjust = new Vector3(0,0,0);
-    private Vector3 initialRotation;
-
-    void Start()
-    {
-        initialRotation = transform.eulerAngles;
-    }
 
     void Update()
     {
@@ -30,6 +24,6 @@ public class CameraUserControlled : MonoBehaviour
 
         Vector3 parentRotation = parent.transform.eulerAngles;
 
-        transform.eulerAngles = initialRotation + parentRotation + positiveRotation;
+        transform.eulerAngles = parentRotation + positiveRotation;
     }
 }

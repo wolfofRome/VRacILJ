@@ -408,7 +408,7 @@ namespace UnityStandardAssets.Vehicles.Car
 
             Vector3 SpeedEulers = SpeedNeedle.localRotation.eulerAngles;
             Vector3 temp = new Vector3(SpeedEulers.x, SpeedEulers.y, -Mathf.Lerp(SpeedNeedleRotateRange.x, SpeedNeedleRotateRange.y, speed / MaxSpeed));
-            print(temp);
+            Debug.Log(temp);
 
             SpeedNeedle.localEulerAngles = Vector3.Lerp(temp, SpeedNeedle.localEulerAngles, Time.deltaTime * _NeedleSmoothing);
         }
