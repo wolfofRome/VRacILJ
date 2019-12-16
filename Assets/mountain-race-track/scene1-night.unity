@@ -25955,17 +25955,17 @@ PrefabInstance:
     - target: {fileID: 6813130832100771147, guid: c09bc988d75ade04fad2f6409575e7fa,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -44.581722
+      value: -192.352
       objectReference: {fileID: 0}
     - target: {fileID: 6813130832100771147, guid: c09bc988d75ade04fad2f6409575e7fa,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.855099
+      value: -1.441
       objectReference: {fileID: 0}
     - target: {fileID: 6813130832100771147, guid: c09bc988d75ade04fad2f6409575e7fa,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -221.0705
+      value: 32.176
       objectReference: {fileID: 0}
     - target: {fileID: 6813130832100771147, guid: c09bc988d75ade04fad2f6409575e7fa,
         type: 3}
@@ -25975,17 +25975,17 @@ PrefabInstance:
     - target: {fileID: 6813130832100771147, guid: c09bc988d75ade04fad2f6409575e7fa,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.89687276
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6813130832100771147, guid: c09bc988d75ade04fad2f6409575e7fa,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6813130832100771147, guid: c09bc988d75ade04fad2f6409575e7fa,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.4422886
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6813130832100771147, guid: c09bc988d75ade04fad2f6409575e7fa,
         type: 3}
@@ -26000,7 +26000,7 @@ PrefabInstance:
     - target: {fileID: 6813130832100771147, guid: c09bc988d75ade04fad2f6409575e7fa,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 232.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6813130832100771147, guid: c09bc988d75ade04fad2f6409575e7fa,
         type: 3}
@@ -26477,6 +26477,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8446576163726423139, guid: c09bc988d75ade04fad2f6409575e7fa,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300062, guid: 450f3c44de4e3cd48ba0d264e2117c82, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c09bc988d75ade04fad2f6409575e7fa, type: 3}
 --- !u!1 &807481797
@@ -31739,7 +31744,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0.03125, y: 0.09765625, z: 0.0234375, w: -0.02734375}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
