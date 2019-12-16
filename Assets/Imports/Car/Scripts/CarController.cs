@@ -33,7 +33,7 @@ namespace UnityStandardAssets.Vehicles.Car
         [SerializeField] private float m_Downforce = 100f;
         [SerializeField] private SpeedType m_SpeedType;
         [SerializeField] private float m_Topspeed = 200;
-        [SerializeField] private static int NoOfGears = 5;
+        [SerializeField] private static int NoOfGears = 6;
         [SerializeField] private float m_RevRangeBoundary = 1f;
         [SerializeField] private float m_SlipLimit;
         [SerializeField] private float m_BrakeTorque;
@@ -60,6 +60,7 @@ namespace UnityStandardAssets.Vehicles.Car
         public Transform SteeringWheel;
         public Text SpeedText;
         public Transform SpeedNeedle;
+        public Text GearText;
 
         // Use this for initialization
         private void Start()
@@ -80,9 +81,26 @@ namespace UnityStandardAssets.Vehicles.Car
 
         private void GearChanging()
         {
-            float f = Mathf.Abs(CurrentSpeed/MaxSpeed);
+            float speed = m_Rigidbody.velocity.magnitude;
+
+            switch (m_SpeedType)
+            {
+                case SpeedType.MPH:
+                    speed *= 2.23693629f;
+                    break;
+                case SpeedType.KPH:
+                    speed *= 3.6f;
+                    break;
+            }
+
+            float f = Mathf.Abs(speed / MaxSpeed);
             float upgearlimit = (1/(float) NoOfGears)*(m_GearNum + 1);
             float downgearlimit = (1/(float) NoOfGears)*m_GearNum;
+
+            /*
+            Debug.Log(speed + "/" + MaxSpeed);
+            Debug.Log(upgearlimit + " " + downgearlimit + " " + f);
+            */
 
             if (m_GearNum > 0 && f < downgearlimit)
             {
@@ -93,6 +111,7 @@ namespace UnityStandardAssets.Vehicles.Car
             {
                 m_GearNum++;
             }
+            GearText.text = (m_GearNum + 1).ToString();
         }
 
 
@@ -195,8 +214,10 @@ namespace UnityStandardAssets.Vehicles.Car
 
                 case SpeedType.KPH:
                     speed *= 3.6f;
-                    if (speed > m_Topspeed)
-                        m_Rigidbody.velocity = (m_Topspeed/3.6f) * m_Rigidbody.velocity.normalized;
+                    if (speed > m_Topspeed) {
+                        m_Rigidbody.velocity = (m_Topspeed / 3.6f) * m_Rigidbody.velocity.normalized;
+                        Debug.Log("Max speed reached");
+                    }
                     break;
             }
         }
@@ -206,6 +227,7 @@ namespace UnityStandardAssets.Vehicles.Car
         {
 
             float thrustTorque;
+            Debug.Log(accel);
             switch (m_CarDriveType)
             {
                 case CarDriveType.FourWheelDrive:
@@ -408,7 +430,6 @@ namespace UnityStandardAssets.Vehicles.Car
 
             Vector3 SpeedEulers = SpeedNeedle.localRotation.eulerAngles;
             Vector3 temp = new Vector3(SpeedEulers.x, SpeedEulers.y, -Mathf.Lerp(SpeedNeedleRotateRange.x, SpeedNeedleRotateRange.y, speed / MaxSpeed));
-            Debug.Log(temp);
 
             SpeedNeedle.localEulerAngles = Vector3.Lerp(temp, SpeedNeedle.localEulerAngles, Time.deltaTime * _NeedleSmoothing);
         }

@@ -120,6 +120,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &456304154 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6852339440030066308, guid: c09bc988d75ade04fad2f6409575e7fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 485268771}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &485268771
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -127,11 +139,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6813130832101202227, guid: c09bc988d75ade04fad2f6409575e7fa,
+    - target: {fileID: 6813130832090967227, guid: c09bc988d75ade04fad2f6409575e7fa,
         type: 3}
-      propertyPath: m_Name
-      value: Car (1)
-      objectReference: {fileID: 0}
+      propertyPath: GearText
+      value: 
+      objectReference: {fileID: 456304154}
     - target: {fileID: 6813130832100771147, guid: c09bc988d75ade04fad2f6409575e7fa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -187,6 +199,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6813130832101202227, guid: c09bc988d75ade04fad2f6409575e7fa,
+        type: 3}
+      propertyPath: m_Name
+      value: Car (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6853110093675766590, guid: c09bc988d75ade04fad2f6409575e7fa,
+        type: 3}
+      propertyPath: txtRPM
+      value: 
+      objectReference: {fileID: 456304154}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c09bc988d75ade04fad2f6409575e7fa, type: 3}
 --- !u!1 &631320674
