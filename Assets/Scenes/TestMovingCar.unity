@@ -144,6 +144,11 @@ PrefabInstance:
       propertyPath: GearText
       value: 
       objectReference: {fileID: 456304154}
+    - target: {fileID: 6813130832090967227, guid: c09bc988d75ade04fad2f6409575e7fa,
+        type: 3}
+      propertyPath: m_Topspeed
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 6813130832100771147, guid: c09bc988d75ade04fad2f6409575e7fa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -579,8 +584,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1573266079}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.3958778, y: 0, z: 1.8184}
-  m_LocalScale: {x: 100, y: 1, z: 100}
+  m_LocalPosition: {x: -1.3958778, y: -0, z: 156874}
+  m_LocalScale: {x: 7414.8, y: 1, z: 355698}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
