@@ -17,6 +17,12 @@ namespace UnityStandardAssets.Vehicles.Car
         KPH
     }
 
+    internal enum TransmitionType
+    {
+        Manual,
+        Auto
+    }
+
     public class CarController : MonoBehaviour
     {
         [SerializeField] private CarDriveType m_CarDriveType = CarDriveType.FourWheelDrive;
@@ -32,6 +38,7 @@ namespace UnityStandardAssets.Vehicles.Car
         [SerializeField] private float m_MaxHandbrakeTorque;
         [SerializeField] private float m_Downforce = 100f;
         [SerializeField] private SpeedType m_SpeedType;
+        [SerializeField] private TransmitionType m_TransmitionType;
         [SerializeField] private float m_Topspeed = 200;
         [SerializeField] private static int NoOfGears = 6;
         [SerializeField] private float m_RevRangeBoundary = 1f;
@@ -61,6 +68,9 @@ namespace UnityStandardAssets.Vehicles.Car
         public Text SpeedText;
         public Transform SpeedNeedle;
         public Text GearText;
+        public float[] powerPerGear = { 2.66f, 1.78f, 1.3f, 1f, .7f, .5f };
+        public float[] topSpeedPerGearFactor = { .15f, .30f, .50f, .75f, .85f, 1 };
+        public bool gearChangeLock = false;
 
         // Use this for initialization
         private void Start()
@@ -76,41 +86,74 @@ namespace UnityStandardAssets.Vehicles.Car
 
             m_Rigidbody = GetComponent<Rigidbody>();
             m_CurrentTorque = m_FullTorqueOverAllWheels - (m_TractionControl*m_FullTorqueOverAllWheels);
-        }
 
+            if(powerPerGear[NoOfGears - 1] < 1)
+            {
+                float offset = 1 - powerPerGear[NoOfGears - 1];
+                for(int i = 0; i < powerPerGear.Length; ++i)
+                {
+                    powerPerGear[i] += offset;
+                }
+            }
+        }
 
         private void GearChanging()
         {
-            float speed = m_Rigidbody.velocity.magnitude;
+            GearChanging(0);
+        }
 
-            switch (m_SpeedType)
+        private void GearChanging(float gearChange)
+        {
+
+            if(m_TransmitionType == TransmitionType.Manual)
             {
-                case SpeedType.MPH:
-                    speed *= 2.23693629f;
-                    break;
-                case SpeedType.KPH:
-                    speed *= 3.6f;
-                    break;
+                if (!gearChangeLock)
+                {
+                    m_GearNum = Mathf.Clamp(m_GearNum + (int)gearChange, 0, NoOfGears-1);
+                }
+
+                if(gearChange != 0)
+                {
+                    gearChangeLock = true;
+                }
+                else
+                {
+                    gearChangeLock = false;
+                }
             }
-
-            float f = Mathf.Abs(speed / MaxSpeed);
-            float upgearlimit = (1/(float) NoOfGears)*(m_GearNum + 1);
-            float downgearlimit = (1/(float) NoOfGears)*m_GearNum;
-
-            /*
-            Debug.Log(speed + "/" + MaxSpeed);
-            Debug.Log(upgearlimit + " " + downgearlimit + " " + f);
-            */
-
-            if (m_GearNum > 0 && f < downgearlimit)
+            else
             {
-                m_GearNum--;
-            }
+                float speed = m_Rigidbody.velocity.magnitude;
+                switch (m_SpeedType)
+                {
+                    case SpeedType.MPH:
+                        speed *= 2.23693629f;
+                        break;
+                    case SpeedType.KPH:
+                        speed *= 3.6f;
+                        break;
+                }
 
-            if (f > upgearlimit && (m_GearNum < (NoOfGears - 1)))
-            {
-                m_GearNum++;
+                float f = Mathf.Abs(speed / MaxSpeed);
+                float upgearlimit = (1 / (float)NoOfGears) * (m_GearNum + 1);
+                float downgearlimit = (1 / (float)NoOfGears) * m_GearNum;
+
+                /*
+                Debug.Log(speed + "/" + MaxSpeed);
+                Debug.Log(upgearlimit + " " + downgearlimit + " " + f);
+                */
+
+                if (m_GearNum > 0 && f < downgearlimit)
+                {
+                    m_GearNum--;
+                }
+
+                if (f > upgearlimit && (m_GearNum < (NoOfGears - 1)))
+                {
+                    m_GearNum++;
+                }
             }
+            
             GearText.text = (m_GearNum + 1).ToString();
         }
 
@@ -150,8 +193,11 @@ namespace UnityStandardAssets.Vehicles.Car
             Revs = ULerp(revsRangeMin, revsRangeMax, m_GearFactor);
         }
 
-
         public void Move(float steering, float accel, float footbrake, float handbrake)
+        {
+            Move(steering, accel, footbrake, handbrake, 0);
+        }
+        public void Move(float steering, float accel, float footbrake, float handbrake, float gearChange)
         {
             for (int i = 0; i < 4; i++)
             {
@@ -189,7 +235,7 @@ namespace UnityStandardAssets.Vehicles.Car
 
 
             CalculateRevs();
-            GearChanging();
+            GearChanging(gearChange);
 
             AddDownForce();
             CheckForWheelSpin();
@@ -203,19 +249,20 @@ namespace UnityStandardAssets.Vehicles.Car
         private void CapSpeed()
         {
             float speed = m_Rigidbody.velocity.magnitude;
+            float topGearSpeed = m_Topspeed * topSpeedPerGearFactor[m_GearNum];
             switch (m_SpeedType)
             {
                 case SpeedType.MPH:
 
                     speed *= 2.23693629f;
-                    if (speed > m_Topspeed)
-                        m_Rigidbody.velocity = (m_Topspeed/2.23693629f) * m_Rigidbody.velocity.normalized;
+                    if (speed > topGearSpeed)
+                        m_Rigidbody.velocity = (topGearSpeed / 2.23693629f) * m_Rigidbody.velocity.normalized;
                     break;
 
                 case SpeedType.KPH:
                     speed *= 3.6f;
-                    if (speed > m_Topspeed) {
-                        m_Rigidbody.velocity = (m_Topspeed / 3.6f) * m_Rigidbody.velocity.normalized;
+                    if (speed > topGearSpeed) {
+                        m_Rigidbody.velocity = (topGearSpeed / 3.6f) * m_Rigidbody.velocity.normalized;
                         Debug.Log("Max speed reached");
                     }
                     break;
@@ -227,7 +274,9 @@ namespace UnityStandardAssets.Vehicles.Car
         {
 
             float thrustTorque;
-            Debug.Log(accel);
+            //TODO multiply by power depending on current gear
+            accel *= powerPerGear[m_GearNum];
+            //Debug.Log("New accel : " + accel);
             switch (m_CarDriveType)
             {
                 case CarDriveType.FourWheelDrive:
