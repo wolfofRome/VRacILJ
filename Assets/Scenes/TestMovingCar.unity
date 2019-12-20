@@ -137,6 +137,16 @@ PrefabInstance:
       propertyPath: engineSoundStyle
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6813130832090967227, guid: c09bc988d75ade04fad2f6409575e7fa,
+        type: 3}
+      propertyPath: RPMNeedle
+      value: 
+      objectReference: {fileID: 2069173939}
+    - target: {fileID: 6813130832090967227, guid: c09bc988d75ade04fad2f6409575e7fa,
+        type: 3}
+      propertyPath: RPMNeedleRotateRange.y
+      value: 270
+      objectReference: {fileID: 0}
     - target: {fileID: 6813130832100771147, guid: c09bc988d75ade04fad2f6409575e7fa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -586,3 +596,9 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 2.220446e-16, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &2069173939 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6810228205177373876, guid: c09bc988d75ade04fad2f6409575e7fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 485268771}
+  m_PrefabAsset: {fileID: 0}

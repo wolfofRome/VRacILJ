@@ -61,11 +61,13 @@ public class CarComponents : MonoBehaviour {
 		}
         */
 
+        /*
 		if (RpmNeedle)
 		{
 			Vector3 temp = new Vector3( RpmdEulers.x,RpmdEulers.y,Mathf.Lerp( RpmNeedleRotateRange.x, RpmNeedleRotateRange.y,	(rotateNeedles)));
 			RpmNeedle.localEulerAngles = Vector3.Lerp( RpmNeedle.localEulerAngles, temp, Time.deltaTime * _NeedleSmoothing);
 		}
+        */
 
         /*
 		if (steeringWheel != null) {

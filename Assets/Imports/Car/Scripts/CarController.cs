@@ -285,9 +285,7 @@ namespace UnityStandardAssets.Vehicles.Car
         {
 
             float thrustTorque;
-            //TODO multiply by power depending on current gear
             accel *= powerPerGear[m_GearNum];
-            //Debug.Log("New accel : " + accel);
             switch (m_CarDriveType)
             {
                 case CarDriveType.FourWheelDrive:
@@ -459,6 +457,8 @@ namespace UnityStandardAssets.Vehicles.Car
 
         public Vector2 SpeedNeedleRotateRange = Vector3.zero;
         public float _NeedleSmoothing = 1;
+        public Transform RPMNeedle;
+        public Vector2 RPMNeedleRotateRange = Vector3.zero;
 
         private void AdjustSteeringWheelRotation()
         {
@@ -474,6 +474,7 @@ namespace UnityStandardAssets.Vehicles.Car
 
         private void AdjustNeedleRotationAndSpeedText()
         {
+            /* Speed */
             float speed = m_Rigidbody.velocity.magnitude;
             switch (m_SpeedType)
             {
@@ -492,6 +493,12 @@ namespace UnityStandardAssets.Vehicles.Car
             Vector3 temp = new Vector3(SpeedEulers.x, SpeedEulers.y, -Mathf.Lerp(SpeedNeedleRotateRange.x, SpeedNeedleRotateRange.y, speed / MaxSpeed));
 
             SpeedNeedle.localEulerAngles = Vector3.Lerp(temp, SpeedNeedle.localEulerAngles, Time.deltaTime * _NeedleSmoothing);
+
+            /* RPM */
+            Vector3 RPMEulers = RPMNeedle.localRotation.eulerAngles;
+            temp = new Vector3(RPMEulers.x, RPMEulers.y, -Mathf.Lerp(RPMNeedleRotateRange.x, RPMNeedleRotateRange.y, m_GearFactor));
+
+            RPMNeedle.localEulerAngles = Vector3.Lerp(temp, RPMNeedle.localEulerAngles, Time.deltaTime * _NeedleSmoothing);
         }
     }
 }

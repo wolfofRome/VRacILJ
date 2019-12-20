@@ -4865,15 +4865,24 @@ MonoBehaviour:
   - 1
   - 0.7
   - 0.5
-  topSpeedPerGearFactor:
-  - 0.2
-  - 0.4
-  - 0.6
-  - 0.8
-  - 0.9
+  maxSpeedPerGearFactor:
+  - 0.15
+  - 0.3
+  - 0.5
+  - 0.75
+  - 0.85
   - 1
+  minSpeedPerGearFactor:
+  - 0
+  - 0.15
+  - 0.3
+  - 0.5
+  - 0.75
+  - 0.85
   SpeedNeedleRotateRange: {x: 0, y: 150}
   _NeedleSmoothing: 1
+  RPMNeedle: {fileID: 6810228205177373876}
+  RPMNeedleRotateRange: {x: 0, y: 270}
 --- !u!114 &6813130832090967215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4898,7 +4907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20fa55eb64c5cea4aa3c71ae19c434bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  engineSoundStyle: 0
+  engineSoundStyle: 1
   lowAccelClip: {fileID: 8300000, guid: c4d8928c75c21af43998193f0f038429, type: 3}
   lowDecelClip: {fileID: 8300000, guid: c4d8928c75c21af43998193f0f038429, type: 3}
   highAccelClip: {fileID: 8300000, guid: 03e3bd08a6e70684dbe299a3e185fdd2, type: 3}
