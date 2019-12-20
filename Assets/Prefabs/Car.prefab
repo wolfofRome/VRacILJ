@@ -4849,13 +4849,29 @@ MonoBehaviour:
   m_MaxHandbrakeTorque: 100000000
   m_Downforce: 100
   m_SpeedType: 1
-  m_Topspeed: 150
+  m_TransmitionType: 0
+  m_Topspeed: 200
   m_RevRangeBoundary: 1
   m_SlipLimit: 0.3
   m_BrakeTorque: 20000
   SteeringWheel: {fileID: 6810542480787854340}
   SpeedText: {fileID: 6851475789441423472}
   SpeedNeedle: {fileID: 6810534985653551874}
+  GearText: {fileID: 6852339440030066308}
+  powerPerGear:
+  - 2.66
+  - 1.78
+  - 1.3
+  - 1
+  - 0.7
+  - 0.5
+  topSpeedPerGearFactor:
+  - 0.2
+  - 0.4
+  - 0.6
+  - 0.8
+  - 0.9
+  - 1
   SpeedNeedleRotateRange: {x: 0, y: 150}
   _NeedleSmoothing: 1
 --- !u!114 &6813130832090967215
@@ -4882,7 +4898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20fa55eb64c5cea4aa3c71ae19c434bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  engineSoundStyle: 1
+  engineSoundStyle: 0
   lowAccelClip: {fileID: 8300000, guid: c4d8928c75c21af43998193f0f038429, type: 3}
   lowDecelClip: {fileID: 8300000, guid: c4d8928c75c21af43998193f0f038429, type: 3}
   highAccelClip: {fileID: 8300000, guid: 03e3bd08a6e70684dbe299a3e185fdd2, type: 3}

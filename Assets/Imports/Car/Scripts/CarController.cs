@@ -69,8 +69,9 @@ namespace UnityStandardAssets.Vehicles.Car
         public Transform SpeedNeedle;
         public Text GearText;
         public float[] powerPerGear = { 2.66f, 1.78f, 1.3f, 1f, .7f, .5f };
-        public float[] topSpeedPerGearFactor = { .15f, .30f, .50f, .75f, .85f, 1 };
-        public bool gearChangeLock = false;
+        public float[] maxSpeedPerGearFactor = { .15f, .30f, .50f, .75f, .85f, 1 };
+        public float[] minSpeedPerGearFactor = { .0f, .15f, .30f, .50f, .75f, .85f };
+        private bool gearChangeLock = false;
 
         // Use this for initialization
         private void Start()
@@ -138,11 +139,6 @@ namespace UnityStandardAssets.Vehicles.Car
                 float upgearlimit = (1 / (float)NoOfGears) * (m_GearNum + 1);
                 float downgearlimit = (1 / (float)NoOfGears) * m_GearNum;
 
-                /*
-                Debug.Log(speed + "/" + MaxSpeed);
-                Debug.Log(upgearlimit + " " + downgearlimit + " " + f);
-                */
-
                 if (m_GearNum > 0 && f < downgearlimit)
                 {
                     m_GearNum--;
@@ -171,13 +167,29 @@ namespace UnityStandardAssets.Vehicles.Car
             return (1.0f - value)*from + value*to;
         }
 
+        private float ConvertSpeed(float speed)
+        {
+            switch (m_SpeedType)
+            {
+                case SpeedType.MPH:
+                    speed *= 2.23693629f;
+                    break;
+                case SpeedType.KPH:
+                    speed *= 3.6f;
+                    break;
+            }
+            return speed;
+        }
 
         private void CalculateGearFactor()
         {
-            float f = (1/(float) NoOfGears);
+            float speed = ConvertSpeed(m_Rigidbody.velocity.magnitude);
+            float minGearSpeed = m_Topspeed * minSpeedPerGearFactor[m_GearNum];
+            float topGearSpeed = m_Topspeed * maxSpeedPerGearFactor[m_GearNum];
+
             // gear factor is a normalised representation of the current speed within the current gear's range of speeds.
             // We smooth towards the 'target' gear factor, so that revs don't instantly snap up or down when changing gear.
-            var targetGearFactor = Mathf.InverseLerp(f*m_GearNum, f*(m_GearNum + 1), Mathf.Abs(CurrentSpeed/MaxSpeed));
+            var targetGearFactor = Mathf.InverseLerp(minGearSpeed, topGearSpeed, Mathf.Abs(speed));
             m_GearFactor = Mathf.Lerp(m_GearFactor, targetGearFactor, Time.deltaTime*5f);
         }
 
@@ -249,7 +261,7 @@ namespace UnityStandardAssets.Vehicles.Car
         private void CapSpeed()
         {
             float speed = m_Rigidbody.velocity.magnitude;
-            float topGearSpeed = m_Topspeed * topSpeedPerGearFactor[m_GearNum];
+            float topGearSpeed = m_Topspeed * maxSpeedPerGearFactor[m_GearNum];
             switch (m_SpeedType)
             {
                 case SpeedType.MPH:
@@ -263,7 +275,6 @@ namespace UnityStandardAssets.Vehicles.Car
                     speed *= 3.6f;
                     if (speed > topGearSpeed) {
                         m_Rigidbody.velocity = (topGearSpeed / 3.6f) * m_Rigidbody.velocity.normalized;
-                        Debug.Log("Max speed reached");
                     }
                     break;
             }
