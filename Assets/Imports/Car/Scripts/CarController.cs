@@ -274,7 +274,9 @@ namespace UnityStandardAssets.Vehicles.Car
                 case SpeedType.KPH:
                     speed *= 3.6f;
                     if (speed > topGearSpeed) {
-                        m_Rigidbody.velocity = (topGearSpeed / 3.6f) * m_Rigidbody.velocity.normalized;
+                        Vector3 speedV = m_Rigidbody.velocity;
+                        Vector3 aimedAtSpeed = (topGearSpeed / 3.6f) * m_Rigidbody.velocity.normalized;
+                        m_Rigidbody.velocity = Vector3.Lerp(speedV, aimedAtSpeed, Time.deltaTime * _NeedleSmoothing);
                     }
                     break;
             }
