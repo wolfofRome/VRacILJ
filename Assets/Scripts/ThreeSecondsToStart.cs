@@ -53,7 +53,6 @@ public class ThreeSecondsToStart : MonoBehaviour
 				audioSource.PlayOneShot(one);
 			if (count == 0)
 				audioSource.PlayOneShot(go);
-			Debug.Log(count);
 			--count;
 		}
 
