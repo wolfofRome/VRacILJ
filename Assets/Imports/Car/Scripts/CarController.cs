@@ -134,6 +134,8 @@ namespace UnityStandardAssets.Vehicles.Car
 
         public void Move(float steering, float accel, float footbrake, float handbrake)
         {
+			if (!ThreeSecondsToStart.GetInstance().CanVehiclesDrive())
+				return;
             for (int i = 0; i < 4; i++)
             {
                 Quaternion quat;
@@ -408,7 +410,7 @@ namespace UnityStandardAssets.Vehicles.Car
 
             Vector3 SpeedEulers = SpeedNeedle.localRotation.eulerAngles;
             Vector3 temp = new Vector3(SpeedEulers.x, SpeedEulers.y, -Mathf.Lerp(SpeedNeedleRotateRange.x, SpeedNeedleRotateRange.y, speed / MaxSpeed));
-            Debug.Log(temp);
+            //Debug.Log(temp);
 
             SpeedNeedle.localEulerAngles = Vector3.Lerp(temp, SpeedNeedle.localEulerAngles, Time.deltaTime * _NeedleSmoothing);
         }

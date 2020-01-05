@@ -25,7 +25,6 @@ public class LapSystem : MonoBehaviour
         checkpointsList = new List<Transform>();
         foreach(CheckpointScript checkpoint in GetComponentsInChildren<CheckpointScript>())
             checkpointsList.Add(checkpoint.transform);
-        Debug.Log(checkpointsList.Count);
     }
 
     public Transform FirstCheckpoint()
