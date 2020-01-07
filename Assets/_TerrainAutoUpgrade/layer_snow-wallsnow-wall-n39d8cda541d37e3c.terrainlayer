@@ -7,8 +7,8 @@ TerrainLayer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: layer_snow-wallsnow-wall-n39d8cda541d37e3c
-  m_DiffuseTexture: {fileID: 2800000, guid: cbfa5e07dd2173a47867eb5c12953459, type: 3}
-  m_NormalMapTexture: {fileID: 2800000, guid: 35acc51697d7ba64a9a472f20586363b, type: 3}
+  m_DiffuseTexture: {fileID: 2800000, guid: 4fbb1c2c0e98bee46a2f56f400bb6351, type: 3}
+  m_NormalMapTexture: {fileID: 2800000, guid: 909991e18b3a69d41a6bd58a242b4cb0, type: 3}
   m_MaskMapTexture: {fileID: 0}
   m_TileSize: {x: 10, y: 10}
   m_TileOffset: {x: 0, y: 0}

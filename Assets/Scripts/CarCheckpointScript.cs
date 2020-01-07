@@ -23,9 +23,23 @@ public class CarCheckpointScript : MonoBehaviour
     {
         if(Input.GetButton("Respawn"))
         {
-            transform.position = lastCheckpoint.position;
+			Respawn();
         }
     }
+
+	public void Respawn() 
+	{
+		if(gameObject.tag == "Player") 
+		{
+			transform.position = lastCheckpoint.position;
+			transform.forward = lastCheckpoint.forward;
+		}
+	}
+
+	public Transform GetNextCheckPoint() 
+	{
+		return nextCheckpoint;
+	}
 
     public bool IsNextCheckpoint(Transform checkpoint)
     {

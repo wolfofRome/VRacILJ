@@ -9,7 +9,6 @@ namespace UnityStandardAssets.Vehicles.Car
     {
         public enum BrakeCondition
         {
-            NeverBrake,                 // the car simply accelerates at full throttle all the time.
             TargetDirectionDifference,  // the car will brake according to the upcoming change in direction of the target. Useful for route-based AI, slowing for corners.
             TargetDistance,             // the car will brake as it approaches its target, regardless of the target's direction. Useful if you want the car to
                                         // head for a stationary target and come to rest when it arrives there.
@@ -30,13 +29,9 @@ namespace UnityStandardAssets.Vehicles.Car
         [SerializeField] private float m_BrakeSensitivity = 1f;                                   // How sensitively the AI uses the brake to reach the current desired speed
         [SerializeField] private float m_LateralWanderDistance = 3f;                              // how far the car will wander laterally towards its target
         [SerializeField] private float m_LateralWanderSpeed = 0.1f;                               // how fast the lateral wandering will fluctuate
-        [SerializeField] [Range(0, 1)] private float m_AccelWanderAmount = 0.1f;                  // how much the cars acceleration will wander
-        [SerializeField] private float m_AccelWanderSpeed = 0.1f;                                 // how fast the cars acceleration wandering will fluctuate
         [SerializeField] private BrakeCondition m_BrakeCondition = BrakeCondition.TargetDistance; // what should the AI consider when accelerating/braking?
         [SerializeField] private bool m_Driving;                                                  // whether the AI is currently actively driving or stopped.
         [SerializeField] private Transform m_Target;                                              // 'target' the target object to aim for.
-        [SerializeField] private bool m_StopWhenTargetReached;                                    // should we stop driving when we reach the target?
-        [SerializeField] private float m_ReachTargetThreshold = 2;                                // proximity to target to consider we 'reached' it, and stop driving.
 
         private float m_RandomPerlin;             // A random value for the car to base its wander on (so that AI cars don't all wander in the same pattern)
         private CarController m_CarController;    // Reference to actual car controller we are controlling
@@ -90,11 +85,8 @@ namespace UnityStandardAssets.Vehicles.Car
                             float spinningAngle = m_Rigidbody.angularVelocity.magnitude*m_CautiousAngularVelocityFactor;
 
                             // if it's different to our current angle, we need to be cautious (i.e. slow down) a certain amount
-                            float cautiousnessRequired = Mathf.InverseLerp(0, m_CautiousMaxAngle,
-                                                                           Mathf.Max(spinningAngle,
-                                                                                     approachingCornerAngle));
-                            desiredSpeed = Mathf.Lerp(m_CarController.MaxSpeed, m_CarController.MaxSpeed*m_CautiousSpeedFactor,
-                                                      cautiousnessRequired);
+                            float cautiousnessRequired = Mathf.InverseLerp(0, m_CautiousMaxAngle, Mathf.Max(spinningAngle, approachingCornerAngle));
+                            desiredSpeed = Mathf.Lerp(m_CarController.MaxSpeed, m_CarController.MaxSpeed*m_CautiousSpeedFactor, cautiousnessRequired);
                             break;
                         }
 
@@ -111,15 +103,10 @@ namespace UnityStandardAssets.Vehicles.Car
                             float spinningAngle = m_Rigidbody.angularVelocity.magnitude*m_CautiousAngularVelocityFactor;
 
                             // if it's different to our current angle, we need to be cautious (i.e. slow down) a certain amount
-                            float cautiousnessRequired = Mathf.Max(
-                                Mathf.InverseLerp(0, m_CautiousMaxAngle, spinningAngle), distanceCautiousFactor);
-                            desiredSpeed = Mathf.Lerp(m_CarController.MaxSpeed, m_CarController.MaxSpeed*m_CautiousSpeedFactor,
-                                                      cautiousnessRequired);
+                            float cautiousnessRequired = Mathf.Max(Mathf.InverseLerp(0, m_CautiousMaxAngle, spinningAngle), distanceCautiousFactor);
+                            desiredSpeed = Mathf.Lerp(m_CarController.MaxSpeed, m_CarController.MaxSpeed*m_CautiousSpeedFactor, cautiousnessRequired);
                             break;
                         }
-
-                    case BrakeCondition.NeverBrake:
-                        break;
                 }
 
                 // Evasive action due to collision with other cars:
@@ -146,17 +133,10 @@ namespace UnityStandardAssets.Vehicles.Car
                 }
 
                 // use different sensitivity depending on whether accelerating or braking:
-                float accelBrakeSensitivity = (desiredSpeed < m_CarController.CurrentSpeed)
-                                                  ? m_BrakeSensitivity
-                                                  : m_AccelSensitivity;
+                float accelBrakeSensitivity = (desiredSpeed < m_CarController.CurrentSpeed) ? m_BrakeSensitivity : m_AccelSensitivity;
 
                 // decide the actual amount of accel/brake input to achieve desired speed.
                 float accel = Mathf.Clamp((desiredSpeed - m_CarController.CurrentSpeed)*accelBrakeSensitivity, -1, 1);
-
-                // add acceleration 'wander', which also prevents AI from seeming too uniform and robotic in their driving
-                // i.e. increasing the accel wander amount can introduce jostling and bumps between AI cars in a race
-                accel *= (1 - m_AccelWanderAmount) +
-                         (Mathf.PerlinNoise(Time.time*m_AccelWanderSpeed, m_RandomPerlin)*m_AccelWanderAmount);
 
                 // calculate the local-relative position of the target, to steer towards
                 Vector3 localTarget = transform.InverseTransformPoint(offsetTargetPos);
@@ -169,12 +149,6 @@ namespace UnityStandardAssets.Vehicles.Car
 
                 // feed input to the car controller.
                 m_CarController.Move(steer, accel, accel, 0f);
-
-                // if appropriate, stop driving when we're close enough to the target.
-                if (m_StopWhenTargetReached && localTarget.magnitude < m_ReachTargetThreshold)
-                {
-                    m_Driving = false;
-                }
             }
         }
 

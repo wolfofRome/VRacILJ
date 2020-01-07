@@ -160,8 +160,8 @@ namespace UnityStandardAssets.Vehicles.Car
                     m_GearNum++;
                 }
             }
-            
-            GearText.text = (m_GearNum + 1).ToString();
+            if(GearText != null)           
+                GearText.text = (m_GearNum + 1).ToString();
         }
 
 
@@ -223,6 +223,8 @@ namespace UnityStandardAssets.Vehicles.Car
 
         public void Move(float steering, float accel, float footbrake, float handbrake, float gearChange)
         {
+			if (ThreeSecondsToStart.GetInstance() != null && !ThreeSecondsToStart.GetInstance().CanVehiclesDrive())
+				return;
             for (int i = 0; i < 4; i++)
             {
                 Quaternion quat;
@@ -280,8 +282,11 @@ namespace UnityStandardAssets.Vehicles.Car
             }
 
             AdjustSteeringWheelRotation();
-            AdjustNeedleRotationAndSpeedText(speed);
-            AdjustCameraZoomAndRotation(speed);
+            if(gameObject.tag == "Player")
+            {
+                AdjustNeedleRotationAndSpeedText(speed);
+                AdjustCameraZoomAndRotation(speed);
+            }
         }
 
 
@@ -504,8 +509,8 @@ namespace UnityStandardAssets.Vehicles.Car
 
         private void AdjustNeedleRotationAndSpeedText(float speed)
         {
-            
-            SpeedText.text = ((int)speed).ToString();
+            if(SpeedText != null)            
+                SpeedText.text = ((int)speed).ToString();
 
             Vector3 SpeedEulers = SpeedNeedle.localRotation.eulerAngles;
             Vector3 temp = new Vector3(SpeedEulers.x, SpeedEulers.y, -Mathf.Lerp(SpeedNeedleRotateRange.x, SpeedNeedleRotateRange.y, speed / MaxSpeed));
@@ -513,10 +518,13 @@ namespace UnityStandardAssets.Vehicles.Car
             SpeedNeedle.localEulerAngles = Vector3.Lerp(temp, SpeedNeedle.localEulerAngles, Time.deltaTime * _NeedleSmoothing);
 
             /* RPM */
-            Vector3 RPMEulers = RPMNeedle.localRotation.eulerAngles;
-            temp = new Vector3(RPMEulers.x, RPMEulers.y, -Mathf.Lerp(RPMNeedleRotateRange.x, RPMNeedleRotateRange.y, m_GearFactor));
+            if(RPMNeedle != null)
+            {
+                Vector3 RPMEulers = RPMNeedle.localRotation.eulerAngles;
+                temp = new Vector3(RPMEulers.x, RPMEulers.y, -Mathf.Lerp(RPMNeedleRotateRange.x, RPMNeedleRotateRange.y, m_GearFactor));
 
-            RPMNeedle.localEulerAngles = Vector3.Lerp(temp, RPMNeedle.localEulerAngles, Time.deltaTime * _NeedleSmoothing);
+                RPMNeedle.localEulerAngles = Vector3.Lerp(temp, RPMNeedle.localEulerAngles, Time.deltaTime * _NeedleSmoothing);
+            }
         }
 
         public Vector2 fovLimits = new Vector2(60,80);
