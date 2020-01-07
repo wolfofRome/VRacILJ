@@ -5,7 +5,6 @@ using UnityEngine;
 public class CameraUserControlled : MonoBehaviour
 {
     public float m_maxX = 15, m_minX = -5, m_maxY = 80, m_minY = -80;
-    public GameObject parent;
 
     public float cameraReadjustSpeed = 2;
     public float delayBeforeReadjust = .25f;
@@ -54,7 +53,7 @@ public class CameraUserControlled : MonoBehaviour
         else
         {
             m_ReadjustTimer = 0.0f;
-            Debug.Log("Current rotation : " + transform.localEulerAngles);
+            //Debug.Log("Current rotation : " + transform.localEulerAngles);
             yAxis *= -1;
             transform.Rotate(new Vector3(yAxis,xAxis,0.0f),Space.World);
 

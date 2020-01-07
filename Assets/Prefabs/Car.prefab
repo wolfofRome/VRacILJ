@@ -4532,7 +4532,8 @@ MonoBehaviour:
   m_minX: -5
   m_maxY: 80
   m_minY: -80
-  parent: {fileID: 6813130832101202227}
+  cameraReadjustSpeed: 2
+  delayBeforeReadjust: 0.25
 --- !u!114 &1178881226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5254,10 +5255,13 @@ MonoBehaviour:
   - 0.5
   - 0.75
   - 0.85
+  cameraTiltWhenGearChange: 10
   SpeedNeedleRotateRange: {x: 0, y: 150}
   _NeedleSmoothing: 1
   RPMNeedle: {fileID: 6810228205177373876}
   RPMNeedleRotateRange: {x: 0, y: 270}
+  MainCamera: {fileID: 6813130830432686766}
+  fovLimits: {x: 60, y: 80}
 --- !u!114 &6813130832090967215
 MonoBehaviour:
   m_ObjectHideFlags: 0

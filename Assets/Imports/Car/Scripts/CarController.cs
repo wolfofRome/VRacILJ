@@ -103,6 +103,8 @@ namespace UnityStandardAssets.Vehicles.Car
             GearChanging(0);
         }
 
+        public  float cameraTiltWhenGearChange = 2.5f;
+
         private void GearChanging(float gearChange)
         {
 
@@ -111,6 +113,15 @@ namespace UnityStandardAssets.Vehicles.Car
                 if (!gearChangeLock)
                 {
                     m_GearNum = Mathf.Clamp(m_GearNum + (int)gearChange, 0, NoOfGears-1);
+                    if(gearChange > 0)
+                    {
+                        MainCamera.transform.Rotate(new Vector3(cameraTiltWhenGearChange, 0, 0));
+                    }
+                    else if (gearChange < 0)
+                    {
+                        MainCamera.transform.Rotate(new Vector3(-cameraTiltWhenGearChange, 0, 0));
+                        Debug.Log(MainCamera.transform.localEulerAngles);
+                    }
                 }
 
                 if(gearChange != 0)
@@ -254,8 +265,23 @@ namespace UnityStandardAssets.Vehicles.Car
             CheckForWheelSpin();
             TractionControl();
 
+            /* Speed */
+            float speed = m_Rigidbody.velocity.magnitude;
+            switch (m_SpeedType)
+            {
+                case SpeedType.MPH:
+
+                    speed *= 2.23693629f;
+                    break;
+
+                case SpeedType.KPH:
+                    speed *= 3.6f;
+                    break;
+            }
+
             AdjustSteeringWheelRotation();
-            AdjustNeedleRotationAndSpeedText();
+            AdjustNeedleRotationAndSpeedText(speed);
+            AdjustCameraZoomAndRotation(speed);
         }
 
 
@@ -462,6 +488,7 @@ namespace UnityStandardAssets.Vehicles.Car
         public float _NeedleSmoothing = 1;
         public Transform RPMNeedle;
         public Vector2 RPMNeedleRotateRange = Vector3.zero;
+        public Camera MainCamera;
 
         private void AdjustSteeringWheelRotation()
         {
@@ -475,21 +502,9 @@ namespace UnityStandardAssets.Vehicles.Car
             }
         }
 
-        private void AdjustNeedleRotationAndSpeedText()
+        private void AdjustNeedleRotationAndSpeedText(float speed)
         {
-            /* Speed */
-            float speed = m_Rigidbody.velocity.magnitude;
-            switch (m_SpeedType)
-            {
-                case SpeedType.MPH:
-
-                    speed *= 2.23693629f;
-                    break;
-
-                case SpeedType.KPH:
-                    speed *= 3.6f;
-                    break;
-            }
+            
             SpeedText.text = ((int)speed).ToString();
 
             Vector3 SpeedEulers = SpeedNeedle.localRotation.eulerAngles;
@@ -502,6 +517,16 @@ namespace UnityStandardAssets.Vehicles.Car
             temp = new Vector3(RPMEulers.x, RPMEulers.y, -Mathf.Lerp(RPMNeedleRotateRange.x, RPMNeedleRotateRange.y, m_GearFactor));
 
             RPMNeedle.localEulerAngles = Vector3.Lerp(temp, RPMNeedle.localEulerAngles, Time.deltaTime * _NeedleSmoothing);
+        }
+
+        public Vector2 fovLimits = new Vector2(60,80);
+
+        private void AdjustCameraZoomAndRotation(float speed)
+        {
+            float speedFactor = speed / m_Topspeed;
+            float newFOV = Mathf.Lerp(fovLimits.x, fovLimits.y, speedFactor);
+
+            MainCamera.fieldOfView = newFOV;
         }
     }
 }

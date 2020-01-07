@@ -22492,12 +22492,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 619663722}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &620327134 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6813130832101202227, guid: c09bc988d75ade04fad2f6409575e7fa,
-    type: 3}
-  m_PrefabInstance: {fileID: 804329617}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &624168816
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25935,18 +25929,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1815524239, guid: c09bc988d75ade04fad2f6409575e7fa, type: 3}
-      propertyPath: parent
-      value: 
-      objectReference: {fileID: 620327134}
-    - target: {fileID: 1815524239, guid: c09bc988d75ade04fad2f6409575e7fa, type: 3}
-      propertyPath: cameraReadjustSpeed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1815524239, guid: c09bc988d75ade04fad2f6409575e7fa, type: 3}
-      propertyPath: delayBeforeReadjust
-      value: 0.25
-      objectReference: {fileID: 0}
     - target: {fileID: 6813130832100771147, guid: c09bc988d75ade04fad2f6409575e7fa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -31269,7 +31251,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: -1.14e-43, y: -1.49e-43, z: 1e-45, w: 3e-44}
+  m_BoundingSphereOverride: {x: 0, y: 5.88357e-39, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
