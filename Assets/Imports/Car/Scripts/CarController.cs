@@ -209,6 +209,7 @@ namespace UnityStandardAssets.Vehicles.Car
         {
             Move(steering, accel, footbrake, handbrake, 0);
         }
+
         public void Move(float steering, float accel, float footbrake, float handbrake, float gearChange)
         {
             for (int i = 0; i < 4; i++)
@@ -300,6 +301,7 @@ namespace UnityStandardAssets.Vehicles.Car
 
                 case CarDriveType.FrontWheelDrive:
                     thrustTorque = accel * (m_CurrentTorque / 2f);
+                    //Debug.Log("Accel : " +accel+"curTorque : "+ m_CurrentTorque+"Thurst torque :  " + thrustTorque);
                     m_WheelColliders[0].motorTorque = m_WheelColliders[1].motorTorque = thrustTorque;
                     break;
 
@@ -307,7 +309,6 @@ namespace UnityStandardAssets.Vehicles.Car
                     thrustTorque = accel * (m_CurrentTorque / 2f);
                     m_WheelColliders[2].motorTorque = m_WheelColliders[3].motorTorque = thrustTorque;
                     break;
-
             }
 
             for (int i = 0; i < 4; i++)
