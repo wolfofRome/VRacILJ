@@ -61,29 +61,20 @@ public class CameraUserControlled : MonoBehaviour
         else
         {
             Debug.Log("Current rotation : " + transform.localEulerAngles);
+            yAxis *= -1;
+            transform.Rotate(new Vector3(yAxis,xAxis,0.0f),Space.World);
 
-            transform.Rotate(new Vector3(yAxis*0,xAxis,0),Space.World);
             if ((transform.localEulerAngles.y > m_maxY && transform.localEulerAngles.y < 180) ||
                 (transform.localEulerAngles.y < 360 + m_minY && transform.localEulerAngles.y > 180))
             {
-                transform.Rotate(new Vector3(0, -xAxis, 0));
+                transform.Rotate(new Vector3(0, -xAxis, 0.0f));
             }
 
-
-        /*
-            rotationAdjust.x = Mathf.Clamp(yAxis * -1 + rotationAdjust.x, m_minX, m_maxX);
-            rotationAdjust.y = Mathf.Clamp(xAxis + rotationAdjust.y, m_minY, m_maxY);
-
-            Vector3 positiveRotation = rotationAdjust;
-            if (positiveRotation.x < 0) positiveRotation.x += 360;
-            if (positiveRotation.y < 0) positiveRotation.y += 360;
-            //print(rotationAdjust + " ## " +positiveRotation);
-
-            Vector3 parentRotation = parent.transform.eulerAngles;
-
-            transform.eulerAngles = parentRotation + positiveRotation;
-            */
-
+            if ((transform.localEulerAngles.x > m_maxX && transform.localEulerAngles.x < 180) ||
+                (transform.localEulerAngles.x < 360 + m_minX && transform.localEulerAngles.x > 180))
+            {
+                transform.Rotate(new Vector3(-yAxis, 0, 0.0f));
+            }
         }
     }
 }
