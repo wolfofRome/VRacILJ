@@ -57,14 +57,18 @@ namespace UnityStandardAssets.Vehicles.Car
 
             // setup the simple audio source
             m_HighAccel = SetUpEngineAudioSource(highAccelClip);
+			m_HighAccel.spatialBlend = 1f;
 
-            // if we have four channel audio setup the four audio sources
-            if (engineSoundStyle == EngineAudioOptions.FourChannel)
+			// if we have four channel audio setup the four audio sources
+			if (engineSoundStyle == EngineAudioOptions.FourChannel)
             {
                 m_LowAccel = SetUpEngineAudioSource(lowAccelClip);
+				m_LowAccel.spatialBlend = 1f;
                 m_LowDecel = SetUpEngineAudioSource(lowDecelClip);
-                m_HighDecel = SetUpEngineAudioSource(highDecelClip);
-            }
+				m_LowDecel.spatialBlend = 1f;
+				m_HighDecel = SetUpEngineAudioSource(highDecelClip);
+				m_HighDecel.spatialBlend = 1f;
+			}
 
             // flag that we have started the sounds playing
             m_StartedSound = true;

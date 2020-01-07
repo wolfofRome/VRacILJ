@@ -78,7 +78,8 @@ public class CarComponents : MonoBehaviour {
         */
 
 		// txtSpeed.text = ((int)(rotateNeedles * 100.0f)).ToString () + " km/h";
-		txtRPM.text = ((int)(rotateNeedles * 1000.0f)).ToString ();
+		if(txtRPM != null)
+			txtRPM.text = ((int)(rotateNeedles * 1000.0f)).ToString ();
 		
 	}
 

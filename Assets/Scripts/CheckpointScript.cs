@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Vehicles.Car;
 
 public class CheckpointScript : MonoBehaviour
 {
@@ -16,10 +17,14 @@ public class CheckpointScript : MonoBehaviour
         CarCheckpointScript ccs = other.transform.root.gameObject.GetComponent<CarCheckpointScript>();
         if(ccs.IsNextCheckpoint(transform))
         {
-            Debug.Log("Checkpoint validé : " + gameObject.name);
             ccs.NextCheckpoint();
         }
-    }
+		CarAIControl ai = other.transform.root.gameObject.GetComponent<CarAIControl>();
+		if(ai != null) 
+		{
+			ai.SetTarget(ccs.GetNextCheckPoint());
+		}
+	}
 
     // Update is called once per frame
     void Update()

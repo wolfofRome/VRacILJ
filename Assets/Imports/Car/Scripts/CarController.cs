@@ -134,7 +134,7 @@ namespace UnityStandardAssets.Vehicles.Car
 
         public void Move(float steering, float accel, float footbrake, float handbrake)
         {
-			if (!ThreeSecondsToStart.GetInstance().CanVehiclesDrive())
+			if (ThreeSecondsToStart.GetInstance() != null && !ThreeSecondsToStart.GetInstance().CanVehiclesDrive())
 				return;
             for (int i = 0; i < 4; i++)
             {
@@ -406,7 +406,8 @@ namespace UnityStandardAssets.Vehicles.Car
                     speed *= 3.6f;
                     break;
             }
-            SpeedText.text = ((int)speed).ToString();
+			if(SpeedText != null)
+	            SpeedText.text = ((int)speed).ToString();
 
             Vector3 SpeedEulers = SpeedNeedle.localRotation.eulerAngles;
             Vector3 temp = new Vector3(SpeedEulers.x, SpeedEulers.y, -Mathf.Lerp(SpeedNeedleRotateRange.x, SpeedNeedleRotateRange.y, speed / MaxSpeed));
