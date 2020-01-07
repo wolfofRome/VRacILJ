@@ -17,6 +17,12 @@ namespace UnityStandardAssets.Vehicles.Car
         KPH
     }
 
+    internal enum TransmitionType
+    {
+        Manual,
+        Auto
+    }
+
     public class CarController : MonoBehaviour
     {
         [SerializeField] private CarDriveType m_CarDriveType = CarDriveType.FourWheelDrive;
@@ -32,8 +38,9 @@ namespace UnityStandardAssets.Vehicles.Car
         [SerializeField] private float m_MaxHandbrakeTorque;
         [SerializeField] private float m_Downforce = 100f;
         [SerializeField] private SpeedType m_SpeedType;
+        [SerializeField] private TransmitionType m_TransmitionType;
         [SerializeField] private float m_Topspeed = 200;
-        [SerializeField] private static int NoOfGears = 5;
+        [SerializeField] private static int NoOfGears = 6;
         [SerializeField] private float m_RevRangeBoundary = 1f;
         [SerializeField] private float m_SlipLimit;
         [SerializeField] private float m_BrakeTorque;
@@ -60,6 +67,11 @@ namespace UnityStandardAssets.Vehicles.Car
         public Transform SteeringWheel;
         public Text SpeedText;
         public Transform SpeedNeedle;
+        public Text GearText;
+        public float[] powerPerGear = { 2.66f, 1.78f, 1.3f, 1f, .7f, .5f };
+        public float[] maxSpeedPerGearFactor = { .15f, .30f, .50f, .75f, .85f, 1 };
+        public float[] minSpeedPerGearFactor = { .0f, .15f, .30f, .50f, .75f, .85f };
+        private bool gearChangeLock = false;
 
         // Use this for initialization
         private void Start()
@@ -75,24 +87,81 @@ namespace UnityStandardAssets.Vehicles.Car
 
             m_Rigidbody = GetComponent<Rigidbody>();
             m_CurrentTorque = m_FullTorqueOverAllWheels - (m_TractionControl*m_FullTorqueOverAllWheels);
-        }
 
+            if(powerPerGear[NoOfGears - 1] < 1)
+            {
+                float offset = 1 - powerPerGear[NoOfGears - 1];
+                for(int i = 0; i < powerPerGear.Length; ++i)
+                {
+                    powerPerGear[i] += offset;
+                }
+            }
+        }
 
         private void GearChanging()
         {
-            float f = Mathf.Abs(CurrentSpeed/MaxSpeed);
-            float upgearlimit = (1/(float) NoOfGears)*(m_GearNum + 1);
-            float downgearlimit = (1/(float) NoOfGears)*m_GearNum;
+            GearChanging(0);
+        }
 
-            if (m_GearNum > 0 && f < downgearlimit)
-            {
-                m_GearNum--;
-            }
+        public  float cameraTiltWhenGearChange = 2.5f;
 
-            if (f > upgearlimit && (m_GearNum < (NoOfGears - 1)))
+        private void GearChanging(float gearChange)
+        {
+
+            if(m_TransmitionType == TransmitionType.Manual)
             {
-                m_GearNum++;
+                if (!gearChangeLock)
+                {
+                    m_GearNum = Mathf.Clamp(m_GearNum + (int)gearChange, 0, NoOfGears-1);
+                    if(gearChange > 0)
+                    {
+                        MainCamera.transform.Rotate(new Vector3(cameraTiltWhenGearChange, 0, 0));
+                    }
+                    else if (gearChange < 0)
+                    {
+                        MainCamera.transform.Rotate(new Vector3(-cameraTiltWhenGearChange, 0, 0));
+                        Debug.Log(MainCamera.transform.localEulerAngles);
+                    }
+                }
+
+                if(gearChange != 0)
+                {
+                    gearChangeLock = true;
+                }
+                else
+                {
+                    gearChangeLock = false;
+                }
             }
+            else
+            {
+                float speed = m_Rigidbody.velocity.magnitude;
+                switch (m_SpeedType)
+                {
+                    case SpeedType.MPH:
+                        speed *= 2.23693629f;
+                        break;
+                    case SpeedType.KPH:
+                        speed *= 3.6f;
+                        break;
+                }
+
+                float f = Mathf.Abs(speed / MaxSpeed);
+                float upgearlimit = (1 / (float)NoOfGears) * (m_GearNum + 1);
+                float downgearlimit = (1 / (float)NoOfGears) * m_GearNum;
+
+                if (m_GearNum > 0 && f < downgearlimit)
+                {
+                    m_GearNum--;
+                }
+
+                if (f > upgearlimit && (m_GearNum < (NoOfGears - 1)))
+                {
+                    m_GearNum++;
+                }
+            }
+            
+            GearText.text = (m_GearNum + 1).ToString();
         }
 
 
@@ -109,13 +178,29 @@ namespace UnityStandardAssets.Vehicles.Car
             return (1.0f - value)*from + value*to;
         }
 
+        private float ConvertSpeed(float speed)
+        {
+            switch (m_SpeedType)
+            {
+                case SpeedType.MPH:
+                    speed *= 2.23693629f;
+                    break;
+                case SpeedType.KPH:
+                    speed *= 3.6f;
+                    break;
+            }
+            return speed;
+        }
 
         private void CalculateGearFactor()
         {
-            float f = (1/(float) NoOfGears);
+            float speed = ConvertSpeed(m_Rigidbody.velocity.magnitude);
+            float minGearSpeed = m_Topspeed * minSpeedPerGearFactor[m_GearNum];
+            float topGearSpeed = m_Topspeed * maxSpeedPerGearFactor[m_GearNum];
+
             // gear factor is a normalised representation of the current speed within the current gear's range of speeds.
             // We smooth towards the 'target' gear factor, so that revs don't instantly snap up or down when changing gear.
-            var targetGearFactor = Mathf.InverseLerp(f*m_GearNum, f*(m_GearNum + 1), Mathf.Abs(CurrentSpeed/MaxSpeed));
+            var targetGearFactor = Mathf.InverseLerp(minGearSpeed, topGearSpeed, Mathf.Abs(speed));
             m_GearFactor = Mathf.Lerp(m_GearFactor, targetGearFactor, Time.deltaTime*5f);
         }
 
@@ -131,8 +216,12 @@ namespace UnityStandardAssets.Vehicles.Car
             Revs = ULerp(revsRangeMin, revsRangeMax, m_GearFactor);
         }
 
-
         public void Move(float steering, float accel, float footbrake, float handbrake)
+        {
+            Move(steering, accel, footbrake, handbrake, 0);
+        }
+
+        public void Move(float steering, float accel, float footbrake, float handbrake, float gearChange)
         {
             for (int i = 0; i < 4; i++)
             {
@@ -170,33 +259,52 @@ namespace UnityStandardAssets.Vehicles.Car
 
 
             CalculateRevs();
-            GearChanging();
+            GearChanging(gearChange);
 
             AddDownForce();
             CheckForWheelSpin();
             TractionControl();
 
-            AdjustSteeringWheelRotation();
-            AdjustNeedleRotationAndSpeedText();
-        }
-
-
-        private void CapSpeed()
-        {
+            /* Speed */
             float speed = m_Rigidbody.velocity.magnitude;
             switch (m_SpeedType)
             {
                 case SpeedType.MPH:
 
                     speed *= 2.23693629f;
-                    if (speed > m_Topspeed)
-                        m_Rigidbody.velocity = (m_Topspeed/2.23693629f) * m_Rigidbody.velocity.normalized;
                     break;
 
                 case SpeedType.KPH:
                     speed *= 3.6f;
-                    if (speed > m_Topspeed)
-                        m_Rigidbody.velocity = (m_Topspeed/3.6f) * m_Rigidbody.velocity.normalized;
+                    break;
+            }
+
+            AdjustSteeringWheelRotation();
+            AdjustNeedleRotationAndSpeedText(speed);
+            AdjustCameraZoomAndRotation(speed);
+        }
+
+
+        private void CapSpeed()
+        {
+            float speed = m_Rigidbody.velocity.magnitude;
+            float topGearSpeed = m_Topspeed * maxSpeedPerGearFactor[m_GearNum];
+            switch (m_SpeedType)
+            {
+                case SpeedType.MPH:
+
+                    speed *= 2.23693629f;
+                    if (speed > topGearSpeed)
+                        m_Rigidbody.velocity = (topGearSpeed / 2.23693629f) * m_Rigidbody.velocity.normalized;
+                    break;
+
+                case SpeedType.KPH:
+                    speed *= 3.6f;
+                    if (speed > topGearSpeed) {
+                        Vector3 speedV = m_Rigidbody.velocity;
+                        Vector3 aimedAtSpeed = (topGearSpeed / 3.6f) * m_Rigidbody.velocity.normalized;
+                        m_Rigidbody.velocity = Vector3.Lerp(speedV, aimedAtSpeed, Time.deltaTime * _NeedleSmoothing);
+                    }
                     break;
             }
         }
@@ -206,6 +314,7 @@ namespace UnityStandardAssets.Vehicles.Car
         {
 
             float thrustTorque;
+            accel *= powerPerGear[m_GearNum];
             switch (m_CarDriveType)
             {
                 case CarDriveType.FourWheelDrive:
@@ -218,6 +327,7 @@ namespace UnityStandardAssets.Vehicles.Car
 
                 case CarDriveType.FrontWheelDrive:
                     thrustTorque = accel * (m_CurrentTorque / 2f);
+                    //Debug.Log("Accel : " +accel+"curTorque : "+ m_CurrentTorque+"Thurst torque :  " + thrustTorque);
                     m_WheelColliders[0].motorTorque = m_WheelColliders[1].motorTorque = thrustTorque;
                     break;
 
@@ -225,7 +335,6 @@ namespace UnityStandardAssets.Vehicles.Car
                     thrustTorque = accel * (m_CurrentTorque / 2f);
                     m_WheelColliders[2].motorTorque = m_WheelColliders[3].motorTorque = thrustTorque;
                     break;
-
             }
 
             for (int i = 0; i < 4; i++)
@@ -377,6 +486,9 @@ namespace UnityStandardAssets.Vehicles.Car
 
         public Vector2 SpeedNeedleRotateRange = Vector3.zero;
         public float _NeedleSmoothing = 1;
+        public Transform RPMNeedle;
+        public Vector2 RPMNeedleRotateRange = Vector3.zero;
+        public Camera MainCamera;
 
         private void AdjustSteeringWheelRotation()
         {
@@ -390,27 +502,31 @@ namespace UnityStandardAssets.Vehicles.Car
             }
         }
 
-        private void AdjustNeedleRotationAndSpeedText()
+        private void AdjustNeedleRotationAndSpeedText(float speed)
         {
-            float speed = m_Rigidbody.velocity.magnitude;
-            switch (m_SpeedType)
-            {
-                case SpeedType.MPH:
-
-                    speed *= 2.23693629f;
-                    break;
-
-                case SpeedType.KPH:
-                    speed *= 3.6f;
-                    break;
-            }
+            
             SpeedText.text = ((int)speed).ToString();
 
             Vector3 SpeedEulers = SpeedNeedle.localRotation.eulerAngles;
             Vector3 temp = new Vector3(SpeedEulers.x, SpeedEulers.y, -Mathf.Lerp(SpeedNeedleRotateRange.x, SpeedNeedleRotateRange.y, speed / MaxSpeed));
-            Debug.Log(temp);
 
             SpeedNeedle.localEulerAngles = Vector3.Lerp(temp, SpeedNeedle.localEulerAngles, Time.deltaTime * _NeedleSmoothing);
+
+            /* RPM */
+            Vector3 RPMEulers = RPMNeedle.localRotation.eulerAngles;
+            temp = new Vector3(RPMEulers.x, RPMEulers.y, -Mathf.Lerp(RPMNeedleRotateRange.x, RPMNeedleRotateRange.y, m_GearFactor));
+
+            RPMNeedle.localEulerAngles = Vector3.Lerp(temp, RPMNeedle.localEulerAngles, Time.deltaTime * _NeedleSmoothing);
+        }
+
+        public Vector2 fovLimits = new Vector2(60,80);
+
+        private void AdjustCameraZoomAndRotation(float speed)
+        {
+            float speedFactor = speed / m_Topspeed;
+            float newFOV = Mathf.Lerp(fovLimits.x, fovLimits.y, speedFactor);
+
+            MainCamera.fieldOfView = newFOV;
         }
     }
 }

@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/mountain-race-track/scene1-night.unity
+    guid: bc04a68536bd2074d926e8fae8665c90
   m_configObjects: {}
