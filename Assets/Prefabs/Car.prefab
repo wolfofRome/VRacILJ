@@ -5307,7 +5307,7 @@ MonoBehaviour:
   - 0.5
   - 0.75
   - 0.85
-  cameraTiltWhenGearChange: 10
+  cameraTiltWhenGearChange: 0
   SpeedNeedleRotateRange: {x: 0, y: 150}
   _NeedleSmoothing: 1
   RPMNeedle: {fileID: 6810228205177373876}

@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using XInputDotNetPure;
 
 namespace UnityStandardAssets.Vehicles.Car
 {
@@ -295,8 +296,11 @@ namespace UnityStandardAssets.Vehicles.Car
                 AdjustNeedleRotationAndSpeedText(speed);
                 AdjustCameraZoomAndRotation(speed);
             }
+
+            TriggerGearRumble(m_GearFactor - rumbleCapTrigger, m_GearFactor - rumbleCapTrigger);
         }
 
+        public float rumbleCapTrigger = .9f;
 
         private void CapSpeed()
         {
@@ -543,6 +547,37 @@ namespace UnityStandardAssets.Vehicles.Car
             float newFOV = Mathf.Lerp(fovLimits.x, fovLimits.y, speedFactor);
 
             MainCamera.fieldOfView = newFOV;
+        }
+
+
+        bool playerIndexSet = false;
+        PlayerIndex playerIndex;
+        GamePadState state;
+        GamePadState prevState;
+
+        private void TriggerGearRumble(float left, float right)
+        {
+            // Find a PlayerIndex, for a single player game
+            // Will find the first controller that is connected ans use it
+            if (!playerIndexSet || !prevState.IsConnected)
+            {
+                for (int i = 0; i < 4; ++i)
+                {
+                    PlayerIndex testPlayerIndex = (PlayerIndex)i;
+                    GamePadState testState = GamePad.GetState(testPlayerIndex);
+                    if (testState.IsConnected)
+                    {
+                        Debug.Log(string.Format("GamePad found {0}", testPlayerIndex));
+                        playerIndex = testPlayerIndex;
+                        playerIndexSet = true;
+                    }
+                }
+            }
+            prevState = state;
+            state = GamePad.GetState(playerIndex);
+
+            //Actually vibrating
+            GamePad.SetVibration(0, left, right);
         }
     }
 }
