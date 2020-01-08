@@ -200,7 +200,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -532,7 +552,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -641,7 +681,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -745,7 +805,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -1140,7 +1220,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -1244,7 +1344,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -1348,7 +1468,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -1459,12 +1599,32 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_RenderMode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -1591,7 +1751,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -1701,7 +1881,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -1800,12 +2000,32 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_RenderMode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -1909,7 +2129,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -2291,7 +2531,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -2567,7 +2827,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -2671,7 +2951,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -2775,7 +3075,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -2978,7 +3298,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -3252,7 +3592,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -3368,7 +3728,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -3970,7 +4350,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -4091,7 +4491,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -4195,7 +4615,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -4299,7 +4739,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -4771,7 +5231,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -5023,7 +5503,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -5132,7 +5632,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -5247,6 +5767,7 @@ GameObject:
   - component: {fileID: 1028855399}
   - component: {fileID: 1028855398}
   - component: {fileID: 1028855397}
+  - component: {fileID: 1028855400}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -5380,6 +5901,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1028855400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1028855396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2f93514730dfb442a69d467d53602bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cars: []
 --- !u!1001 &1038779772
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5460,7 +5994,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -5724,7 +6278,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -6098,7 +6672,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -6288,7 +6882,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -6392,7 +7006,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -6496,7 +7130,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -7298,7 +7952,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -7408,7 +8082,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -7518,7 +8212,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -7628,7 +8342,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -7680,13 +8414,13 @@ Light:
   serializedVersion: 9
   m_Type: 1
   m_Color: {r: 0.8392157, g: 0.9226887, b: 1, a: 1}
-  m_Intensity: 0.13
+  m_Intensity: 0.2
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -7736,13 +8470,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1339431895}
-  m_LocalRotation: {x: -0.9396927, y: 0, z: 0, w: -0.34202012}
+  m_LocalRotation: {x: -0.99904823, y: 0, z: 0, w: -0.04361941}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: -220, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -185, y: 0, z: 0}
 --- !u!4 &1356310730 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 363695512638599519, guid: 6758b623083d1a445a059d41ac5bf8e6,
@@ -7834,7 +8568,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -8037,7 +8791,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -8152,7 +8926,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -8516,7 +9310,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -13441,7 +14255,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -13638,7 +14472,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -13976,12 +14830,32 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_RenderMode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -14085,7 +14959,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -14269,7 +15163,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -14373,7 +15287,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -14576,7 +15510,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -14685,7 +15639,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -14962,7 +15936,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -15463,7 +16457,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -15666,7 +16680,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -15875,7 +16909,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -16221,12 +17275,32 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_RenderMode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -16415,7 +17489,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -16530,7 +17624,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -16709,7 +17823,27 @@ PrefabInstance:
     - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 90
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363695511616934147, guid: 6758b623083d1a445a059d41ac5bf8e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 363695511616934149, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}

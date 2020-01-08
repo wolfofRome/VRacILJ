@@ -1,9 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class CarCheckpointScript : MonoBehaviour
 {
+    [System.NonSerialized]
+    public int totalCheckpointsPassed;
+    [System.NonSerialized]
+    public int positionInRace;
     private int currentLap;
     private int currentCheckpointNum;
     private Transform nextCheckpoint;
@@ -12,6 +16,7 @@ public class CarCheckpointScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        totalCheckpointsPassed = 0;
         currentLap = 1;
         currentCheckpointNum = 0;
         nextCheckpoint = LapSystem.Instance.FirstCheckpoint();
@@ -52,8 +57,15 @@ public class CarCheckpointScript : MonoBehaviour
         {
             currentLap++;
             Debug.Log("Lap finished : current lap is : " + currentLap);
+            if(gameObject.tag == "Player" && currentLap == 4)
+            {
+                CrossSceneInformation.PlayerHasFinishedGame = true;
+                CrossSceneInformation.PlayerFinalPositionInRace = positionInRace;
+                SceneManager.LoadScene("Menu");
+            }
         }
         lastCheckpoint = nextCheckpoint;
         nextCheckpoint = LapSystem.Instance.NextCheckpoint(ref currentCheckpointNum);
+        ++totalCheckpointsPassed;
     }
 }
