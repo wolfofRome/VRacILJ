@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using UnityEngine.UI;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,10 +10,13 @@ public class CarCheckpointScript : MonoBehaviour
     private Transform nextCheckpoint;
     private Transform lastCheckpoint;
 
+    public Text lapCountText;
+
     // Start is called before the first frame update
     void Start()
     {
         currentLap = 1;
+        lapCountText.text = "Lap\n" + currentLap + " / 3";
         currentCheckpointNum = 0;
         nextCheckpoint = LapSystem.Instance.FirstCheckpoint();
         lastCheckpoint = LapSystem.Instance.LastCheckpoint();
@@ -51,6 +55,7 @@ public class CarCheckpointScript : MonoBehaviour
         if(currentCheckpointNum == LapSystem.Instance.checkpointsList.Count - 1)
         {
             currentLap++;
+            lapCountText.text = "Lap\n" + currentLap + " / 3";
             Debug.Log("Lap finished : current lap is : " + currentLap);
         }
         lastCheckpoint = nextCheckpoint;
