@@ -1488,6 +1488,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6758b623083d1a445a059d41ac5bf8e6, type: 3}
+--- !u!1 &278759605 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8821388490602598273, guid: c09bc988d75ade04fad2f6409575e7fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 1288471628}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &284428763 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 363695512638599519, guid: 6758b623083d1a445a059d41ac5bf8e6,
@@ -7057,6 +7063,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 377786394893491757, guid: c09bc988d75ade04fad2f6409575e7fa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 177852053102932328, guid: c09bc988d75ade04fad2f6409575e7fa,
         type: 3}
       propertyPath: m_TagString
@@ -7189,10 +7200,24 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1815524239, guid: c09bc988d75ade04fad2f6409575e7fa, type: 3}
+      propertyPath: leftMirror
+      value: 
+      objectReference: {fileID: 278759605}
+    - target: {fileID: 1815524239, guid: c09bc988d75ade04fad2f6409575e7fa, type: 3}
+      propertyPath: rightMirror
+      value: 
+      objectReference: {fileID: 1289475415}
     m_RemovedComponents:
     - {fileID: 11798598, guid: c09bc988d75ade04fad2f6409575e7fa, type: 3}
     - {fileID: 940284429, guid: c09bc988d75ade04fad2f6409575e7fa, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c09bc988d75ade04fad2f6409575e7fa, type: 3}
+--- !u!1 &1289475415 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8539435708751817669, guid: c09bc988d75ade04fad2f6409575e7fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 1288471628}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1294135741
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7655,7 +7680,7 @@ Light:
   serializedVersion: 9
   m_Type: 1
   m_Color: {r: 0.8392157, g: 0.9226887, b: 1, a: 1}
-  m_Intensity: 0.3
+  m_Intensity: 0.13
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -7664,7 +7689,7 @@ Light:
     m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 0.5
+    m_Strength: 1
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -7711,13 +7736,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1339431895}
-  m_LocalRotation: {x: -0.9961947, y: 0, z: 0, w: 0.08715588}
+  m_LocalRotation: {x: -0.9396927, y: 0, z: 0, w: -0.34202012}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: -170, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -220, y: 0, z: 0}
 --- !u!4 &1356310730 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 363695512638599519, guid: 6758b623083d1a445a059d41ac5bf8e6,
@@ -14620,7 +14645,7 @@ PrefabInstance:
     - target: {fileID: 363695512638599519, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.5284382
+      value: -0.30403313
       objectReference: {fileID: 0}
     - target: {fileID: 363695512638599519, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -14630,7 +14655,7 @@ PrefabInstance:
     - target: {fileID: 363695512638599519, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8489718
+      value: 0.9526615
       objectReference: {fileID: 0}
     - target: {fileID: 363695512638599519, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -14645,7 +14670,7 @@ PrefabInstance:
     - target: {fileID: 363695512638599519, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -63.8
+      value: -35.4
       objectReference: {fileID: 0}
     - target: {fileID: 363695512638599519, guid: 6758b623083d1a445a059d41ac5bf8e6,
         type: 3}
@@ -16582,7 +16607,7 @@ Terrain:
   m_Enabled: 1
   serializedVersion: 5
   m_TerrainData: {fileID: 15600000, guid: 1c008b673cefbff4cb3fb5058dfd6e80, type: 2}
-  m_TreeDistance: 5000
+  m_TreeDistance: 300
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 50

@@ -8,6 +8,8 @@ public class CameraUserControlled : MonoBehaviour
 
     public float cameraReadjustSpeed = 2;
     public float delayBeforeReadjust = .25f;
+    public GameObject leftMirror;
+    public GameObject rightMirror;
 
     private float m_ReadjustTimer = 0;
 
@@ -71,5 +73,13 @@ public class CameraUserControlled : MonoBehaviour
         }
 
         transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, 0);
+        if(transform.localEulerAngles.y < 10f)
+            rightMirror.SetActive(false);
+        else
+            rightMirror.SetActive(true);
+        if(transform.localEulerAngles.y > 15f && transform.localEulerAngles.y < 250f)
+            leftMirror.SetActive(false);
+        else
+            leftMirror.SetActive(true);
     }
 }

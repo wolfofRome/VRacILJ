@@ -42,17 +42,17 @@ Light:
   serializedVersion: 9
   m_Type: 0
   m_Color: {r: 0.9607445, g: 0.9420415, b: 0.9705882, a: 1}
-  m_Intensity: 4
-  m_Range: 10
+  m_Intensity: 3.5
+  m_Range: 15
   m_SpotAngle: 90
   m_InnerSpotAngle: 71.41338
   m_CookieSize: 10
   m_Shadows:
     m_Type: 1
-    m_Resolution: 2
+    m_Resolution: 0
     m_CustomResolution: -1
     m_Strength: 0.5
-    m_Bias: 0.01
+    m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
     m_CullingMatrixOverride:
@@ -414,17 +414,17 @@ Light:
   serializedVersion: 9
   m_Type: 0
   m_Color: {r: 0.9607445, g: 0.9420415, b: 0.9705882, a: 1}
-  m_Intensity: 4
-  m_Range: 10
+  m_Intensity: 3.5
+  m_Range: 15
   m_SpotAngle: 90
   m_InnerSpotAngle: 71.41338
   m_CookieSize: 10
   m_Shadows:
     m_Type: 1
-    m_Resolution: 2
+    m_Resolution: 0
     m_CustomResolution: -1
     m_Strength: 0.5
-    m_Bias: 0.01
+    m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
     m_CullingMatrixOverride:
@@ -5247,6 +5247,7 @@ GameObject:
   - component: {fileID: 6990100085223124720}
   - component: {fileID: 7123770695216143380}
   - component: {fileID: 3631098372019615773}
+  - component: {fileID: 3404533349521553891}
   m_Layer: 0
   m_Name: Opponent
   m_TagString: Car
@@ -5423,6 +5424,22 @@ MonoBehaviour:
   m_BrakeCondition: 1
   m_Driving: 1
   m_Target: {fileID: 0}
+--- !u!114 &3404533349521553891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6990100085229656930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 514962de43481724c836b025847c9148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  brakeEffects: {fileID: 6990820722515579671}
+  frontLightEffects: {fileID: 6991020511205155509}
+  frontLightsOn: 1
+  brakeEffectsOn: 1
 --- !u!1 &6990100085229656936
 GameObject:
   m_ObjectHideFlags: 0
@@ -8569,7 +8586,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6993558943839145499}
-  - component: {fileID: 6960290996691001711}
   m_Layer: 0
   m_Name: OurCarModel
   m_TagString: Car
@@ -8603,32 +8619,6 @@ Transform:
   m_Father: {fileID: 6990100085229815578}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6960290996691001711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6991588179609781879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f51906e2f04ec744fb1fb2942e6f81c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blink: 0
-  frontLightsOn: 1
-  brakeEffectsOn: 1
-  SpeedNeedle: {fileID: 6993854817192755539}
-  SpeedNeedleRotateRange: {x: 0, y: 359}
-  RpmNeedle: {fileID: 6993530443519510245}
-  RpmNeedleRotateRange: {x: 0, y: 359}
-  _NeedleSmoothing: 1
-  steeringWheel: {fileID: 0}
-  brakeEffects: {fileID: 6990820722515579671}
-  frontLightEffects: {fileID: 6991020511205155509}
-  reverseEffect: {fileID: 6991145272869461539}
-  txtSpeed: {fileID: 0}
-  txtRPM: {fileID: 0}
 --- !u!1 &6991597154675003455
 GameObject:
   m_ObjectHideFlags: 0

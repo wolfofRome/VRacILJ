@@ -237,6 +237,14 @@ namespace UnityStandardAssets.Vehicles.Car
             //clamp input values
             steering = Mathf.Clamp(steering, -1, 1);
             AccelInput = accel = Mathf.Clamp(accel, 0, 1);
+            if(gameObject.tag == "Car")
+            {
+                if(footbrake < 0)
+                    GetComponent<AILights>().brakeEffectsOn = true;
+                else
+                    GetComponent<AILights>().brakeEffectsOn = false;
+                GetComponent<AILights>().SwitchBackLights(); 
+            }
             BrakeInput = footbrake = -1*Mathf.Clamp(footbrake, -1, 0);
             handbrake = Mathf.Clamp(handbrake, 0, 1);
 
