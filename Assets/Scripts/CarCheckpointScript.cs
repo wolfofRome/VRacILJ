@@ -61,6 +61,7 @@ public class CarCheckpointScript : MonoBehaviour
             {
                 CrossSceneInformation.PlayerHasFinishedGame = true;
                 CrossSceneInformation.PlayerFinalPositionInRace = positionInRace;
+                CrossSceneInformation.TimeToFinishRace = GameManagerTimer.GetInstance().GetTimerAsString();
                 SceneManager.LoadScene("Menu");
             }
         }

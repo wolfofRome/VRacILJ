@@ -17,7 +17,7 @@ public class MainMenu : MonoBehaviour
 			PositionInRaceText.gameObject.SetActive(true);
 			RaceTimeText.gameObject.SetActive(true);
 			PositionInRaceText.text = "You finished the race in " + playerPos + ((playerPos==1)?("st"):((playerPos==2)?("nd"):((playerPos==3)?("rd"):("th")))) + " place.";
-			RaceTimeText.text = "Total time : ";
+			RaceTimeText.text = "Total time : " + CrossSceneInformation.TimeToFinishRace;
 		}
 		else
 		{
