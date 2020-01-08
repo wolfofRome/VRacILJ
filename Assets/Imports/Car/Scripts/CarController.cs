@@ -115,12 +115,12 @@ namespace UnityStandardAssets.Vehicles.Car
                     m_GearNum = Mathf.Clamp(m_GearNum + (int)gearChange, 0, NoOfGears-1);
                     if(gearChange > 0)
                     {
-                        MainCamera.transform.Rotate(new Vector3(cameraTiltWhenGearChange, 0, 0));
+                        //MainCamera.transform.Rotate(new Vector3(cameraTiltWhenGearChange, 0, 0));
                     }
                     else if (gearChange < 0)
                     {
-                        MainCamera.transform.Rotate(new Vector3(-cameraTiltWhenGearChange, 0, 0));
-                        Debug.Log(MainCamera.transform.localEulerAngles);
+                        //MainCamera.transform.Rotate(new Vector3(-cameraTiltWhenGearChange, 0, 0));
+                        //Debug.Log(MainCamera.transform.localEulerAngles);
                     }
                 }
 

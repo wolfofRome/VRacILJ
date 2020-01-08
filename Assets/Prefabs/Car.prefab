@@ -1497,7 +1497,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6817728823703497632
 Transform:
   m_ObjectHideFlags: 0
@@ -2262,7 +2262,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6810194655400455662
 Transform:
   m_ObjectHideFlags: 0
@@ -2625,7 +2625,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6810358232578301700
 Transform:
   m_ObjectHideFlags: 0
@@ -4147,7 +4147,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6812773001039954982}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f51906e2f04ec744fb1fb2942e6f81c3, type: 3}
   m_Name: 
@@ -4504,6 +4504,8 @@ MonoBehaviour:
   m_minY: -80
   cameraReadjustSpeed: 2
   delayBeforeReadjust: 0.25
+  leftMirror: {fileID: 0}
+  rightMirror: {fileID: 0}
 --- !u!114 &1178881226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6144,7 +6146,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6813130832100771161
 Transform:
   m_ObjectHideFlags: 0
@@ -6171,7 +6173,7 @@ Light:
   m_Type: 0
   m_Color: {r: 0.9607445, g: 0.9420415, b: 0.9705882, a: 1}
   m_Intensity: 4
-  m_Range: 10
+  m_Range: 50
   m_SpotAngle: 90
   m_InnerSpotAngle: 71.41338
   m_CookieSize: 10
@@ -6235,7 +6237,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6813130832100771163
 Transform:
   m_ObjectHideFlags: 0
@@ -6262,7 +6264,7 @@ Light:
   m_Type: 0
   m_Color: {r: 0.9607445, g: 0.9420415, b: 0.9705882, a: 1}
   m_Intensity: 4
-  m_Range: 10
+  m_Range: 50
   m_SpotAngle: 90
   m_InnerSpotAngle: 71.41338
   m_CookieSize: 10
