@@ -296,8 +296,8 @@ namespace UnityStandardAssets.Vehicles.Car
                 AdjustNeedleRotationAndSpeedText(speed);
                 AdjustCameraZoomAndRotation(speed);
             }
-
-            TriggerGearRumble(m_GearFactor - rumbleCapTrigger, m_GearFactor - rumbleCapTrigger);
+            if(gameObject.tag == "Player")
+                TriggerGearRumble(m_GearFactor - rumbleCapTrigger, m_GearFactor - rumbleCapTrigger);
         }
 
         public float rumbleCapTrigger = .9f;

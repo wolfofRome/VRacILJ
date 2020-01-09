@@ -42,10 +42,10 @@ Light:
   serializedVersion: 9
   m_Type: 0
   m_Color: {r: 0.9607445, g: 0.9420415, b: 0.9705882, a: 1}
-  m_Intensity: 3.5
-  m_Range: 15
-  m_SpotAngle: 90
-  m_InnerSpotAngle: 71.41338
+  m_Intensity: 4
+  m_Range: 10
+  m_SpotAngle: 70
+  m_InnerSpotAngle: 7
   m_CookieSize: 10
   m_Shadows:
     m_Type: 1
@@ -414,10 +414,10 @@ Light:
   serializedVersion: 9
   m_Type: 0
   m_Color: {r: 0.9607445, g: 0.9420415, b: 0.9705882, a: 1}
-  m_Intensity: 3.5
-  m_Range: 15
-  m_SpotAngle: 90
-  m_InnerSpotAngle: 71.41338
+  m_Intensity: 4
+  m_Range: 10
+  m_SpotAngle: 70
+  m_InnerSpotAngle: 7
   m_CookieSize: 10
   m_Shadows:
     m_Type: 1
@@ -5358,6 +5358,7 @@ MonoBehaviour:
   - 0.75
   - 0.85
   cameraTiltWhenGearChange: 2.5
+  rumbleCapTrigger: 0.9
   SpeedNeedleRotateRange: {x: 0, y: 150}
   _NeedleSmoothing: 1
   RPMNeedle: {fileID: 0}
@@ -5400,6 +5401,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a08549d6b75e3854b874c2961c710f2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeFreezingAfterCheckpoint: 1
+  lapCountText: {fileID: 0}
+  timerText: {fileID: 0}
+  checkpointSound: {fileID: 0}
 --- !u!114 &3631098372019615773
 MonoBehaviour:
   m_ObjectHideFlags: 0

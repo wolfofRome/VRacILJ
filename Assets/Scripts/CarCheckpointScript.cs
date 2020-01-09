@@ -18,14 +18,16 @@ public class CarCheckpointScript : MonoBehaviour
     public float timeFreezingAfterCheckpoint = 1;
     public Text lapCountText;
     public Text timerText;
-    public AudioSource chekpointSound;
+    public Text fpsText;
+    public AudioSource checkpointSound;
 
     // Start is called before the first frame update
     void Start()
     {
         totalCheckpointsPassed = 0;
         currentLap = 1;
-        lapCountText.text = "Lap\n" + currentLap + " / 3";
+        if(lapCountText != null)
+            lapCountText.text = "Lap\n" + currentLap + " / 3";
         currentCheckpointNum = 0;
         nextCheckpoint = LapSystem.Instance.FirstCheckpoint();
         lastCheckpoint = LapSystem.Instance.LastCheckpoint();
@@ -34,9 +36,11 @@ public class CarCheckpointScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(fpsText != null)
+            fpsText.text = Mathf.Ceil(1f / Time.unscaledDeltaTime) + " FPS";
         if (GameManagerTimer.GetInstance() != null && GameManagerTimer.GetInstance().CanVehiclesDrive())
         {
-            if(!(timerFreezeTimer > 0))
+            if(!(timerFreezeTimer > 0) && timerText != null)
             {
                 timerText.text = GameManagerTimer.GetInstance().GetTimerAsString();
             }
@@ -47,7 +51,8 @@ public class CarCheckpointScript : MonoBehaviour
         }
         else
         {
-            timerText.text = "00:00:000";
+            if(timerText != null)
+                timerText.text = "00:00:000";
         }
         if(Input.GetButton("Respawn"))
         {
@@ -79,7 +84,8 @@ public class CarCheckpointScript : MonoBehaviour
         if(currentCheckpointNum == LapSystem.Instance.checkpointsList.Count - 1)
         {
             currentLap++;
-            lapCountText.text = "Lap\n" + currentLap + " / 3";
+            if(lapCountText != null)
+                lapCountText.text = "Lap\n" + currentLap + " / 3";
             Debug.Log("Lap finished : current lap is : " + currentLap);
             if(gameObject.tag == "Player" && currentLap == 4)
             {
@@ -95,7 +101,8 @@ public class CarCheckpointScript : MonoBehaviour
 
         if(totalCheckpointsPassed % 5 == 0)
         {
-            chekpointSound.Play();
+            if(checkpointSound != null)
+                checkpointSound.Play();
             timerFreezeTimer = timeFreezingAfterCheckpoint;
         }
     }

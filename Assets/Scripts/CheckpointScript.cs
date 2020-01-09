@@ -20,6 +20,7 @@ public class CheckpointScript : MonoBehaviour
             ccs.NextCheckpoint();
         }
 		CarAIControl ai = other.transform.root.gameObject.GetComponent<CarAIControl>();
+
 		if(ai != null) 
 		{
 			ai.SetTarget(ccs.GetNextCheckPoint());
