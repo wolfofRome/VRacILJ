@@ -615,6 +615,50 @@ Transform:
   m_Father: {fileID: 6810066503740054032}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3547511905279502084
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8333566065464933767}
+  - component: {fileID: 2252654468734763750}
+  m_Layer: 0
+  m_Name: Trigger4OfRoad (1)
+  m_TagString: CarWheel
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8333566065464933767
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3547511905279502084}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.457, y: -0.836, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6813130832100771159}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2252654468734763750
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3547511905279502084}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4156494, y: 1, z: 1}
+  m_Center: {x: -0.24468994, y: 0, z: 0}
 --- !u!1 &4069442090648560574
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,6 +738,50 @@ MonoBehaviour:
   m_Text: 'Lap
 
     x / 3'
+--- !u!1 &5964115357038075953
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7939673067738866998}
+  - component: {fileID: 4009716929082207200}
+  m_Layer: 0
+  m_Name: Trigger4OfRoad (2)
+  m_TagString: CarWheel
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7939673067738866998
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5964115357038075953}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.431, y: -0.84900004, z: 0.07899785}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6813130832100771155}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4009716929082207200
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5964115357038075953}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4156494, y: 1, z: 1}
+  m_Center: {x: -0.24468994, y: 0, z: 0}
 --- !u!1 &6811728363330746226
 GameObject:
   m_ObjectHideFlags: 0
@@ -5388,6 +5476,7 @@ MonoBehaviour:
   - 0.75
   - 0.85
   cameraTiltWhenGearChange: 0
+  cptWheelsOfRoad: 0
   rumbleCapTrigger: 0.9
   SpeedNeedleRotateRange: {x: 0, y: 150}
   _NeedleSmoothing: 1
@@ -5714,7 +5803,7 @@ GameObject:
   - component: {fileID: 6813130832090967223}
   m_Layer: 0
   m_Name: WheelHubRearLeft
-  m_TagString: Player
+  m_TagString: CarWheel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5729,7 +5818,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.191, y: 0.651, z: -1.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 7939673067738866998}
   m_Father: {fileID: 6813130832100771199}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5887,7 +5977,7 @@ GameObject:
   - component: {fileID: 6813130832090967209}
   m_Layer: 0
   m_Name: WheelHubRearRight
-  m_TagString: Player
+  m_TagString: CarWheel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5902,7 +5992,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.185, y: 0.651, z: -1.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 8312213838594089960}
   m_Father: {fileID: 6813130832100771199}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6060,7 +6151,7 @@ GameObject:
   - component: {fileID: 6813130832090967211}
   m_Layer: 0
   m_Name: WheelHubFrontLeft
-  m_TagString: Player
+  m_TagString: CarWheel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6075,7 +6166,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.191, y: 0.638, z: 1.594}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 8333566065464933767}
   m_Father: {fileID: 6813130832100771199}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6248,7 +6340,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.185, y: 0.638, z: 1.594}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 550939417903860474}
   m_Father: {fileID: 6813130832100771199}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12677,6 +12770,50 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 9016b61604c26de4eb34c220e327402e, type: 3}
   - {fileID: 8300000, guid: 7d9fb9a5e7c154743bde849a0ec3108c, type: 3}
   - {fileID: 8300000, guid: 0fcc3f89888f9e74e8f3cca0c3ec9d6b, type: 3}
+--- !u!1 &7264534635333434726
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8312213838594089960}
+  - component: {fileID: 6354814072082774743}
+  m_Layer: 0
+  m_Name: Trigger4OfRoad (1)
+  m_TagString: CarWheel
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8312213838594089960
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7264534635333434726}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.00005865097, y: -0.84900004, z: 0.079}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6813130832100771157}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6354814072082774743
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7264534635333434726}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4156494, y: 1, z: 1}
+  m_Center: {x: -0.24468994, y: 0, z: 0}
 --- !u!1 &7815650600097839771
 GameObject:
   m_ObjectHideFlags: 0
@@ -12907,6 +13044,50 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8539435708751817669}
   m_Mesh: {fileID: -1252531514617392419, guid: 5062d8eed8b15a44b93f5029f4db2cdd, type: 3}
+--- !u!1 &8738597562370807306
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 550939417903860474}
+  - component: {fileID: 335701837549459613}
+  m_Layer: 0
+  m_Name: Trigger4OfRoad
+  m_TagString: CarWheel
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &550939417903860474
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8738597562370807306}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.836, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6813130832100771145}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &335701837549459613
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8738597562370807306}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4156494, y: 1, z: 1}
+  m_Center: {x: -0.24468994, y: 0, z: 0}
 --- !u!1 &8821388490602598273
 GameObject:
   m_ObjectHideFlags: 0

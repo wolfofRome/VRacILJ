@@ -295,10 +295,15 @@ namespace UnityStandardAssets.Vehicles.Car
             {
                 AdjustNeedleRotationAndSpeedText(speed);
                 AdjustCameraZoomAndRotation(speed);
+
+                float leftRumble = m_GearFactor - rumbleCapTrigger;
+                float rightRumble = (4 - cptWheelsOnRoad)*2;
+                TriggerGearRumble(rightRumble, leftRumble);
+                
             }
-            if(gameObject.tag == "Player")
-                TriggerGearRumble(m_GearFactor - rumbleCapTrigger, m_GearFactor - rumbleCapTrigger);
+
         }
+        public int cptWheelsOnRoad = 0;
 
         public float rumbleCapTrigger = .9f;
 
@@ -577,7 +582,7 @@ namespace UnityStandardAssets.Vehicles.Car
             state = GamePad.GetState(playerIndex);
 
             //Actually vibrating
-            GamePad.SetVibration(0, left, right);
+            GamePad.SetVibration(playerIndex, left, right);
         }
     }
 }
