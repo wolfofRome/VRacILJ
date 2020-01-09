@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
-public class ThreeSecondsToStart : MonoBehaviour
+public class GameManagerTimer : MonoBehaviour
 {
-	private static ThreeSecondsToStart instance;
+	private static GameManagerTimer instance;
 	private bool canVehiclesDrive = false;
 	private AudioSource audioSource;
 	public AudioClip three;
 	public AudioClip two;
 	public AudioClip one;
 	public AudioClip go;
+	public float TimeSinceStart; 
 
-	public static ThreeSecondsToStart GetInstance() 
+	public static GameManagerTimer GetInstance() 
 	{
 		return instance;
 	}
@@ -55,7 +56,18 @@ public class ThreeSecondsToStart : MonoBehaviour
 				audioSource.PlayOneShot(go);
 			--count;
 		}
-
+		TimeSinceStart = 0;
 		canVehiclesDrive = true;
+	}
+
+	public string GetTimerAsString()
+	{
+		string min = Mathf.Floor(TimeSinceStart / 60).ToString("00");
+		string sec = (TimeSinceStart % 60).ToString("00");
+		return (min + ":" + sec);
+	}
+	void Update()
+	{
+		TimeSinceStart += Time.deltaTime;
 	}
 }

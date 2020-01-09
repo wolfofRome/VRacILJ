@@ -224,7 +224,7 @@ namespace UnityStandardAssets.Vehicles.Car
 
         public void Move(float steering, float accel, float footbrake, float handbrake, float gearChange)
         {
-			if (ThreeSecondsToStart.GetInstance() != null && !ThreeSecondsToStart.GetInstance().CanVehiclesDrive())
+			if (GameManagerTimer.GetInstance() != null && !GameManagerTimer.GetInstance().CanVehiclesDrive())
 				return;
             for (int i = 0; i < 4; i++)
             {
