@@ -5368,7 +5368,7 @@ MonoBehaviour:
   timeFreezingAfterCheckpoint: 3
   lapCountText: {fileID: 8033338447440529640}
   timerText: {fileID: 5196932566660679170}
-  chekpointSound: {fileID: 0}
+  chekpointSound: {fileID: 3552073119318491148}
 --- !u!82 &3552073119318491148
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12624,7 +12624,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7815650600097839771}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.0071}
+  m_LocalPosition: {x: 0, y: 0, z: 0.007}
   m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 1}
   m_Children: []
   m_Father: {fileID: 6742478666977289518}
@@ -12632,7 +12632,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 56.9, y: -50.2}
+  m_AnchoredPosition: {x: 54.6, y: -50.2}
   m_SizeDelta: {x: 70.7, y: 182.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3404142379642909867
@@ -12663,10 +12663,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 1
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -12674,7 +12674,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: timer
+  m_Text: 00:00:000
 --- !u!1 &7852222154824464617
 GameObject:
   m_ObjectHideFlags: 0

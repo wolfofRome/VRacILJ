@@ -64,7 +64,8 @@ public class GameManagerTimer : MonoBehaviour
 	{
 		string min = Mathf.Floor(TimeSinceStart / 60).ToString("00");
 		string sec = (TimeSinceStart % 60).ToString("00");
-		return (min + ":" + sec);
+        string ms = (TimeSinceStart * 1000 % 1000).ToString("000");
+        return (min + ":" + sec + ":" + ms);
 	}
 	void Update()
 	{

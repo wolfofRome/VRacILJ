@@ -15,7 +15,7 @@ public class CarCheckpointScript : MonoBehaviour
     private Transform lastCheckpoint;
     private float timerFreezeTimer;
 
-    public float timeFreezingAfterCheckpoint = 3;
+    public float timeFreezingAfterCheckpoint = 1;
     public Text lapCountText;
     public Text timerText;
     public AudioSource chekpointSound;
@@ -34,16 +34,20 @@ public class CarCheckpointScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManagerTimer.GetInstance().CanVehiclesDrive())
+        if (GameManagerTimer.GetInstance() != null && GameManagerTimer.GetInstance().CanVehiclesDrive())
         {
             if(!(timerFreezeTimer > 0))
             {
                 timerText.text = GameManagerTimer.GetInstance().GetTimerAsString();
             }
+            else
+            {
+                timerFreezeTimer -= Time.deltaTime;
+            }
         }
         else
         {
-            timerText.text = "00:00";
+            timerText.text = "00:00:000";
         }
         if(Input.GetButton("Respawn"))
         {
@@ -88,7 +92,11 @@ public class CarCheckpointScript : MonoBehaviour
         lastCheckpoint = nextCheckpoint;
         nextCheckpoint = LapSystem.Instance.NextCheckpoint(ref currentCheckpointNum);
         ++totalCheckpointsPassed;
-        chekpointSound.Play();
-        timerFreezeTimer = timeFreezingAfterCheckpoint;
+
+        if(totalCheckpointsPassed % 5 == 0)
+        {
+            chekpointSound.Play();
+            timerFreezeTimer = timeFreezingAfterCheckpoint;
+        }
     }
 }
