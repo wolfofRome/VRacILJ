@@ -261,12 +261,13 @@ namespace UnityStandardAssets.Vehicles.Car
 
             //Set the handbrake.
             //Assuming that wheels 2 and 3 are the rear wheels.
+            /*
             if (handbrake > 0f)
             {
                 var hbTorque = handbrake*m_MaxHandbrakeTorque;
                 m_WheelColliders[2].brakeTorque = hbTorque;
                 m_WheelColliders[3].brakeTorque = hbTorque;
-            }
+            }*/
 
 
             CalculateRevs();

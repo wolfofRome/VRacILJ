@@ -5476,7 +5476,7 @@ MonoBehaviour:
   - 0.75
   - 0.85
   cameraTiltWhenGearChange: 0
-  cptWheelsOfRoad: 0
+  cptWheelsOnRoad: 0
   rumbleCapTrigger: 0.9
   SpeedNeedleRotateRange: {x: 0, y: 150}
   _NeedleSmoothing: 1
@@ -5549,7 +5549,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: bdc6c4f328797a440884aa39bc807d6c, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -12655,7 +12655,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 0
   Mute: 0
