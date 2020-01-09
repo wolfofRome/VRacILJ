@@ -420,7 +420,7 @@ Light:
   m_InnerSpotAngle: 7
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: 0
     m_CustomResolution: -1
     m_Strength: 0.5
@@ -5404,6 +5404,7 @@ MonoBehaviour:
   timeFreezingAfterCheckpoint: 1
   lapCountText: {fileID: 0}
   timerText: {fileID: 0}
+  fpsText: {fileID: 0}
   checkpointSound: {fileID: 0}
 --- !u!114 &3631098372019615773
 MonoBehaviour:
@@ -5426,7 +5427,7 @@ MonoBehaviour:
   m_BrakeSensitivity: 1
   m_LateralWanderDistance: 1
   m_LateralWanderSpeed: 0.1
-  m_BrakeCondition: 1
+  m_BrakeCondition: 0
   m_Driving: 1
   m_Target: {fileID: 0}
 --- !u!114 &3404533349521553891
@@ -6793,8 +6794,8 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6990820722515579671}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -7445,7 +7446,7 @@ MeshRenderer:
   m_GameObject: {fileID: 6990948099902797091}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -8990,7 +8991,7 @@ MeshRenderer:
   m_GameObject: {fileID: 6991642248290930413}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1

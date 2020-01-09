@@ -24,6 +24,10 @@ namespace UnityStandardAssets.Vehicles.Car
             float f1 = Input.GetAxis("Fire1");
 #if !MOBILE_INPUT
             float handbrake = Input.GetAxis("Jump");
+            if(Input.GetButton("Respawn"))
+            {
+                gameObject.GetComponent<CarCheckpointScript>().Respawn();
+            }
             m_Car.Move(h, v, v, handbrake,f1);
 #else
             m_Car.Move(h, v, v, 0f);

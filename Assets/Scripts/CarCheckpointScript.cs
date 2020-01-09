@@ -14,6 +14,7 @@ public class CarCheckpointScript : MonoBehaviour
     private Transform nextCheckpoint;
     private Transform lastCheckpoint;
     private float timerFreezeTimer;
+    private int fpsTextUpdate = 0;
 
     public float timeFreezingAfterCheckpoint = 1;
     public Text lapCountText;
@@ -36,8 +37,12 @@ public class CarCheckpointScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(fpsText != null)
-            fpsText.text = Mathf.Ceil(1f / Time.unscaledDeltaTime) + " FPS";
+        fpsTextUpdate++;
+        if(fpsText != null && fpsTextUpdate == 5)
+        {
+            fpsTextUpdate = 0;
+            fpsText.text = Mathf.RoundToInt(1f / Time.deltaTime) + " FPS";
+        }
         if (GameManagerTimer.GetInstance() != null && GameManagerTimer.GetInstance().CanVehiclesDrive())
         {
             if(!(timerFreezeTimer > 0) && timerText != null)
@@ -54,19 +59,12 @@ public class CarCheckpointScript : MonoBehaviour
             if(timerText != null)
                 timerText.text = "00:00:000";
         }
-        if(Input.GetButton("Respawn"))
-        {
-			Respawn();
-        }
     }
 
 	public void Respawn() 
 	{
-		if(gameObject.tag == "Player") 
-		{
-			transform.position = lastCheckpoint.position;
-			transform.forward = lastCheckpoint.forward;
-		}
+        this.transform.position = lastCheckpoint.position;
+        this.transform.forward = lastCheckpoint.forward;
 	}
 
 	public Transform GetNextCheckPoint() 
